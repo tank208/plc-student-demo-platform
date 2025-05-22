@@ -31,9 +31,6 @@ The project introduces students (high school through college) to:
 
 <<<<<<< HEAD
 - Student Research Lead: William Hall (UI CDA Lab)
-=======
-- Student Research Lead: Will (UI CDA Lab)
->>>>>>> 1ece870 (Update README with project overview)
 - Advisors: Dr. John Shovic, Dr. Mary Everett
 
 ## Notes
