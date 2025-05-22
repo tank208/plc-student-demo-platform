@@ -1,0 +1,20 @@
+# Editor folders
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python and temp
+__pycache__/
+*.pyc
+*.swp
+
+# Markdown backups
+*.bak
+*.tmp
+
+# Misc
+*.log
+.env
