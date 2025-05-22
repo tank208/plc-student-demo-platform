@@ -1,29 +1,39 @@
-# Arduino Opta PLC Student Training Platform
+# PLC Student Demo Platform
 
-This project develops a modular, reproducible PLC training system using the Arduino Opta WiFi. It's designed to introduce high school and early-college students to the fundamentals of industrial automation, ladder logic programming, and secure control system design.
+This repository supports the development and deployment of a reproducible, secure industrial control system training module using the Arduino Opta micro-PLC and Ignition SCADA software.
 
-The repository includes:
-- Beginner-friendly curriculum modules with scaffolded learning progression
-- Instructor guides with safety notes, wiring considerations, and live demo strategies
-- Development logs documenting progress, rationale, and design decisions
-- Safe programming workflow using USB-only power for initial modules
+## Project Purpose
 
-## Modules
+The project introduces students (high school through college) to:
+- PLC hardware (Arduino Opta)
+- Ladder Logic programming via Arduino PLC IDE
+- Modbus TCP/IP communication
+- SCADA visualization with Ignition
+- Secure OT system design principles
 
-| Module | Title | Description |
-|--------|-------|-------------|
-| 00     | What is a PLC? | Conceptual overview and real-world relevance |
-| 01     | Exploring the Opta System | Guided tour of Opta, Simul8, and Celsius hardware |
-| 02+    | In development | Future modules will cover sensor inputs, relays, and SCADA/Modbus integration |
+## Folder Structure
 
-## Directory Structure
+- `00_intro/`: Context, purpose, student-facing intro material
+- `01_curriculum/`: Workshop modules, student worksheets, slides
+- `02_instructor/`: Wiring guides, instructor setup notes, demos
+- `03_code/`: PLC code (IEC 61131-3) and Arduino sketches
+- `04_assets/`: Diagrams, photos, instructional screenshots
+- `devlog/`: Daily technical logs, sanitized for public use
+- `docs/`: Research proposal, project plan, datasheets
 
-```bash
-plc-student-demo-platform/
-├── curriculum/          # Student-facing lessons and walkthroughs
-├── instructor/          # Instructor-only notes and wiring diagrams
-├── devlog/              # Daily logs and technical decisions
-├── assets/              # Diagrams and screenshots for modules
-├── README.md            # This file
-├── .gitignore           # Git exclusion rules
-└── LICENSE              # Usage and contribution rights
+## Status
+
+- Week 3 in development
+- LED/Button module proof of concept complete
+- Curriculum scaffolding under active development
+
+## Contributors
+
+- Student Research Lead: William Hall (UI CDA Lab)
+- Advisors: Dr. John Shovic, Dr. Mary Everett
+
+## Notes
+
+This repository is sanitized for public educational use. Full hardware schematics and instructor wiring plans are kept private in instructional archives.
+
+---

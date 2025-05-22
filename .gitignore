@@ -1,20 +1,24 @@
-# Editor folders
-.vscode/
-.idea/
+# Arduino / PLC IDE
+*.elf
+*.bin
+*.hex
+*.map
 
-# OS files
+# OS metadata
 .DS_Store
 Thumbs.db
 
-# Python and temp
-__pycache__/
-*.pyc
-*.swp
+# VS Code
+.vscode/
+*.code-workspace
 
-# Markdown backups
+# Backup & temp
 *.bak
 *.tmp
+*.swp
+*.swo
 
-# Misc
-*.log
-.env
+# OS-generated files
+ehthumbs.db
+Icon?
+__MACOSX/
