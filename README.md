@@ -18,7 +18,7 @@ The project introduces students (high school through college) to:
 - `02_instructor/`: Wiring guides, instructor setup notes, demos
 - `03_code/`: PLC code (IEC 61131-3) and Arduino sketches
 - `04_assets/`: Diagrams, photos, instructional screenshots
-- `devlog/`: Daily technical logs, sanitized for public use
+- `devlog/`: Daily technical logs
 - `docs/`: Research proposal, project plan, datasheets
 
 ## Status
