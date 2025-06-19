@@ -58,6 +58,17 @@ All engineering decisions, logic experimentation, and debugging are tracked in t
 
 ---
 
+## Attribution
+
+This project was developed by **William Hall** as part of undergraduate research at the **University of Idaho – Coeur d’Alene**, under the mentorship of **Dr. John Shovic** and **Mary Everett**.
+
+Its purpose is to provide a modular, secure, and reproducible framework for teaching PLC control systems using the Arduino Opta.
+
+Licensed under the [MIT License](LICENSE).
+
+If you adapt or deploy this project, please retain attribution and cite the original work when possible.
+
+
 ## Notes
 
 This repository is sanitized for educational and research use.  
