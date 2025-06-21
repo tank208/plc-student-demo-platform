@@ -30,4 +30,4 @@ This developer log documents my daily engineering progress building a secure and
 - [Day 2 – I/O Logic Mapping](./week07_day02_0617_io_logic_map.md)
 - [Day 3 – Modbus Tags & Architecture](./week07_day03_0618_modbus_and_tags.md)
 - [Day 4 - Test DIN Simul8](./week07_day04_0619_test_DIN_Simul8.md)
-- [Day 5 - Home PLC Trainer Frame Build](.week07_day05_0620_Home_PLC_Trainer_Frame.md)
+- [Day 5 - Home PLC Trainer Frame Build](./week07_day05_0620_Home_PLC_Trainer_Frame.md)
