@@ -31,3 +31,10 @@ This developer log documents my daily engineering progress building a secure and
 - [Day 3 – Modbus Tags & Architecture](./week07_day03_0618_modbus_and_tags.md)
 - [Day 4 - Test DIN Simul8](./week07_day04_0619_test_DIN_Simul8.md)
 - [Day 5 - Home PLC Trainer Frame Build](./week07_day05_0620_Home_PLC_Trainer_Frame.md)
+
+---
+
+## Week 8 - Ladder Logic
+
+- [Day 1 - Home PLC power on and calibration](./week08_day01_home_stack_power_on.md)
+- 
