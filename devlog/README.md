@@ -37,4 +37,4 @@ This developer log documents my daily engineering progress building a secure and
 ## Week 8 - Ladder Logic
 
 - [Day 1 - Home PLC power on and calibration](./week08_day01_home_stack_power_on.md)
-- 
+- [Day 2 - Celsius and Simul8 module](./week08_day02_celsius_simul8_modules.md)
