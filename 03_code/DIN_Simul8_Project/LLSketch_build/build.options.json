@@ -1,0 +1,9 @@
+{
+  "additionalFiles": "",
+  "compiler.optimization_flags": "",
+  "customBuildProperties": "build.warn_data_percentage=75",
+  "fqbn": "arduino:mbed_opta:opta",
+  "hardwareFolders": "C:\\Users\\GE76\\AppData\\Local\\T\\A\\packages",
+  "otherLibrariesFolders": "C:\\Users\\GE76\\AppData\\Local\\T\\U\\libraries",
+  "sketchLocation": "C:\\Users\\GE76\\Documents\\01 PLC Project\\PLC IDE Projects\\DIN_Simul8_Project01\\LLSketch"
+}

@@ -1,0 +1,80 @@
+profiles:
+  pmc_1.0.3:
+    fqbn: arduino:mbed_portenta:envie_m7
+    platforms:
+      - platform: arduino:mbed_portenta (3.5.4)
+    libraries:
+      - AlPlc_PMC (1.0.3)
+      - Arduino_MachineControl (1.1.1)
+      - ArduinoRS485 (1.0.5)
+
+
+  opta_1.0.3:
+    fqbn: arduino:mbed_opta:opta
+    platforms:
+      - platform: arduino:mbed_opta (3.5.4)
+    libraries:
+      - AlPlc_Opta (1.0.3)
+      - ArduinoRS485 (1.0.5)
+
+
+  pmc_1.0.4:
+    fqbn: arduino:mbed_portenta:envie_m7
+    platforms:
+      - platform: arduino:mbed_portenta (3.5.4)
+    libraries:
+      - AlPlc_PMC (1.0.4)
+      - Arduino_MachineControl (1.1.1)
+      - ArduinoRS485 (1.0.5)
+
+
+  opta_1.0.4:
+    fqbn: arduino:mbed_opta:opta
+    platforms:
+      - platform: arduino:mbed_opta (3.5.4)
+    libraries:
+      - AlPlc_Opta (1.0.4)
+      - ArduinoRS485 (1.0.5)
+
+
+  pmc_1.0.6:
+    fqbn: arduino:mbed_portenta:envie_m7
+    platforms:
+      - platform: arduino:mbed_portenta (3.5.4)
+    libraries:
+      - AlPlc_PMC (1.0.6)
+      - Arduino_MachineControl (1.1.1)
+      - ArduinoRS485 (1.0.5)
+
+
+  opta_1.0.6:
+    fqbn: arduino:mbed_opta:opta
+    platforms:
+      - platform: arduino:mbed_opta (3.5.4)
+    libraries:
+      - AlPlc_Opta (1.0.6)
+      - ArduinoRS485 (1.0.5)
+
+
+  opta_1.1.0:
+    fqbn: arduino:mbed_opta:opta
+    platforms:
+      - platform: arduino:mbed_opta (4.1.1)
+    libraries:
+      - AlPlc_Opta (1.1.0)
+      - ArduinoRS485 (1.0.5)
+      - Arduino_Opta_Blueprint (0.1.0)
+      - Arduino_SerialUpdater (0.0.1)
+      - Arduino_DebugUtils (1.4.0)
+
+
+  opta_1.2.0:
+    fqbn: arduino:mbed_opta:opta
+    platforms:
+      - platform: arduino:mbed_opta (4.1.6)
+    libraries:
+      - AlPlc_Opta (1.2.0)
+      - ArduinoRS485 (1.0.5)
+      - Arduino_Opta_Blueprint (0.2.2)
+      - Arduino_SerialUpdater (0.0.1)
+      - Arduino_DebugUtils (1.4.0)

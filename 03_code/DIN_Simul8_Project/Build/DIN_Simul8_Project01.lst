@@ -1,0 +1,897 @@
+***********************************************************************
+*
+*	CODE GENERATION LISTING FOR: DIN_Simul8_Project01
+*	COMPILER VERSION: 5.22.0.39
+*
+***********************************************************************
+
+**************************************************
+	CODE GENERATOR SUBROUTINES
+**************************************************
+
+$$MOD:
+300000B0  FB90 F3F1		sdiv r3, r0, r1
+300000B4  4359     		mul r1, r1, r3
+300000B6  EBC1 0000		rsb r0, r1, r0
+300000BA  4770     		bx lr
+
+$$MOD_U:
+300000BC  FBB0 F3F1		udiv r3, r0, r1
+300000C0  4359     		mul r1, r1, r3
+300000C2  EBC1 0000		rsb r0, r1, r0
+300000C6  4770     		bx lr
+
+**************************************************
+	List program: main
+**************************************************
+
+PROGRAM main
+
+END_PROGRAM
+
+300000D0  B082     		sub sp, sp, #8
+300000D2  F8CD E000		str lr, [sp]
+300000D6  E92D 0FF0		stmdb sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
+
+#0		{SRC:main}
+#1		(*$WAITSWITCH$*)
+#2		
+#3			(* cnt := cnt + 1; *)
+#4			LD		cnt	{LNXT:2|2|-1}
+(*) UNDEF
+300000DA  F8DF 7010		ldr r7, [pc, #+16] ; 0x200002A6
+300000DE  F9B7 0000		ldrsh r0, [r7]
+
+#5			ADD		1	{LNXT:2|2|-1}
+(-) INT
+300000E2  1C40     		add r0, r0, #1
+
+#6			ST		cnt	{LNXT:2|2|-1}
+(*) INT
+300000E4  F8DF 7004		ldr r7, [pc, #+4] ; 0x200002A6
+300000E8  8038     		strh r0, [r7]
+
+300000EA  E001     		b #2
+
+300000EC  200002A6		; 0x200002A6
+
+END_PROGRAM
+**************************************************
+	List program: SwitchCounter_ST
+**************************************************
+
+PROGRAM SwitchCounter_ST
+
+        VAR
+switchCount : INT;
+i : INT;
+	END_VAR
+
+END_PROGRAM
+
+#0		{SRC:SwitchCounter_ST}
+#1		(*$WAITSWITCH$*)
+#2		
+#3			(* switchCount :=0; *)
+#4			MOVE		0,switchCount	{LNXT:2|5|-1}
+(*) UDINT
+300000F0  2000     		mov r0, #0 ; 0
+300000F2  F8DF 7180		ldr r7, [pc, #+384] ; 0x200002AC
+300000F6  8038     		strh r0, [r7]
+
+#5		
+#6		
+#7			(* IF Input_1 *)
+#8			LD		Input_1	{LNXT:5|-1|-1}
+(*) UNDEF
+300000F8  F8DF 718C		ldr r7, [pc, #+396] ; 0x2401E4F0
+300000FC  7838     		ldrb r0, [r7]
+
+#9			JMPCN	$label0	{LNXT:5|6|9}
+(-) BOOL
+300000FE  2800     		cmp r0, #0
+30000100  D008     		beq #16 ; 0x30000114
+
+
+#10		
+#11			(* THEN *)
+#12		
+#13				(* switchCount := switchCount + 1; *)
+#14				LD		switchCount	{LNXT:6|9|-1}
+(*) UNDEF
+30000104  F8DF 716C		ldr r7, [pc, #+364] ; 0x200002AC
+30000108  F9B7 0000		ldrsh r0, [r7]
+
+#15				ADD		1	{LNXT:6|9|-1}
+(-) INT
+3000010C  1C40     		add r0, r0, #1
+
+#16				ST		switchCount	{LNXT:6|9|-1}
+(*) INT
+3000010E  F8DF 7164		ldr r7, [pc, #+356] ; 0x200002AC
+30000112  8038     		strh r0, [r7]
+
+#17		
+#18		$label0:
+#19			(* END_IF *)
+#20		
+#21		
+#22			(* IF Input_2 *)
+#23			LD		Input_2	{LNXT:9|-1|-1}
+(*) UNDEF
+30000114  F8DF 7174		ldr r7, [pc, #+372] ; 0x2401E4F2
+30000118  7838     		ldrb r0, [r7]
+
+#24			JMPCN	$label1	{LNXT:9|10|13}
+(-) BOOL
+3000011A  2800     		cmp r0, #0
+3000011C  D008     		beq #16 ; 0x30000130
+
+
+#25		
+#26			(* THEN *)
+#27		
+#28				(* switchCount := switchCount + 1; *)
+#29				LD		switchCount	{LNXT:10|13|-1}
+(*) UNDEF
+30000120  F8DF 7150		ldr r7, [pc, #+336] ; 0x200002AC
+30000124  F9B7 0000		ldrsh r0, [r7]
+
+#30				ADD		1	{LNXT:10|13|-1}
+(-) INT
+30000128  1C40     		add r0, r0, #1
+
+#31				ST		switchCount	{LNXT:10|13|-1}
+(*) INT
+3000012A  F8DF 7148		ldr r7, [pc, #+328] ; 0x200002AC
+3000012E  8038     		strh r0, [r7]
+
+#32		
+#33		$label1:
+#34			(* END_IF *)
+#35		
+#36		
+#37			(* IF Input_3 *)
+#38			LD		Input_3	{LNXT:13|-1|-1}
+(*) UNDEF
+30000130  F8DF 715C		ldr r7, [pc, #+348] ; 0x2401E4F4
+30000134  7838     		ldrb r0, [r7]
+
+#39			JMPCN	$label2	{LNXT:13|14|17}
+(-) BOOL
+30000136  2800     		cmp r0, #0
+30000138  D008     		beq #16 ; 0x3000014C
+
+
+#40		
+#41			(* THEN *)
+#42		
+#43				(* switchCount := switchCount + 1; *)
+#44				LD		switchCount	{LNXT:14|17|-1}
+(*) UNDEF
+3000013C  F8DF 7134		ldr r7, [pc, #+308] ; 0x200002AC
+30000140  F9B7 0000		ldrsh r0, [r7]
+
+#45				ADD		1	{LNXT:14|17|-1}
+(-) INT
+30000144  1C40     		add r0, r0, #1
+
+#46				ST		switchCount	{LNXT:14|17|-1}
+(*) INT
+30000146  F8DF 712C		ldr r7, [pc, #+300] ; 0x200002AC
+3000014A  8038     		strh r0, [r7]
+
+#47		
+#48		$label2:
+#49			(* END_IF *)
+#50		
+#51		
+#52			(* IF Input_4 *)
+#53			LD		Input_4	{LNXT:17|-1|-1}
+(*) UNDEF
+3000014C  F8DF 7144		ldr r7, [pc, #+324] ; 0x2401E4F6
+30000150  7838     		ldrb r0, [r7]
+
+#54			JMPCN	$label3	{LNXT:17|18|21}
+(-) BOOL
+30000152  2800     		cmp r0, #0
+30000154  D008     		beq #16 ; 0x30000168
+
+
+#55		
+#56			(* THEN *)
+#57		
+#58				(* switchCount := switchCount + 1; *)
+#59				LD		switchCount	{LNXT:18|21|-1}
+(*) UNDEF
+30000158  F8DF 7118		ldr r7, [pc, #+280] ; 0x200002AC
+3000015C  F9B7 0000		ldrsh r0, [r7]
+
+#60				ADD		1	{LNXT:18|21|-1}
+(-) INT
+30000160  1C40     		add r0, r0, #1
+
+#61				ST		switchCount	{LNXT:18|21|-1}
+(*) INT
+30000162  F8DF 7110		ldr r7, [pc, #+272] ; 0x200002AC
+30000166  8038     		strh r0, [r7]
+
+#62		
+#63		$label3:
+#64			(* END_IF *)
+#65		
+#66		
+#67			(* IF Input_5 *)
+#68			LD		Input_5	{LNXT:21|-1|-1}
+(*) UNDEF
+30000168  F8DF 712C		ldr r7, [pc, #+300] ; 0x2401E4F8
+3000016C  7838     		ldrb r0, [r7]
+
+#69			JMPCN	$label4	{LNXT:21|22|25}
+(-) BOOL
+3000016E  2800     		cmp r0, #0
+30000170  D008     		beq #16 ; 0x30000184
+
+
+#70		
+#71			(* THEN *)
+#72		
+#73				(* switchCount := switchCount + 1; *)
+#74				LD		switchCount	{LNXT:22|25|-1}
+(*) UNDEF
+30000174  F8DF 70FC		ldr r7, [pc, #+252] ; 0x200002AC
+30000178  F9B7 0000		ldrsh r0, [r7]
+
+#75				ADD		1	{LNXT:22|25|-1}
+(-) INT
+3000017C  1C40     		add r0, r0, #1
+
+#76				ST		switchCount	{LNXT:22|25|-1}
+(*) INT
+3000017E  F8DF 70F4		ldr r7, [pc, #+244] ; 0x200002AC
+30000182  8038     		strh r0, [r7]
+
+#77		
+#78		$label4:
+#79			(* END_IF *)
+#80		
+#81		
+#82			(* IF Input_6 *)
+#83			LD		Input_6	{LNXT:25|-1|-1}
+(*) UNDEF
+30000184  F8DF 7114		ldr r7, [pc, #+276] ; 0x2401E4FA
+30000188  7838     		ldrb r0, [r7]
+
+#84			JMPCN	$label5	{LNXT:25|26|29}
+(-) BOOL
+3000018A  2800     		cmp r0, #0
+3000018C  D008     		beq #16 ; 0x300001A0
+
+
+#85		
+#86			(* THEN *)
+#87		
+#88				(* switchCount := switchCount + 1; *)
+#89				LD		switchCount	{LNXT:26|29|-1}
+(*) UNDEF
+30000190  F8DF 70E0		ldr r7, [pc, #+224] ; 0x200002AC
+30000194  F9B7 0000		ldrsh r0, [r7]
+
+#90				ADD		1	{LNXT:26|29|-1}
+(-) INT
+30000198  1C40     		add r0, r0, #1
+
+#91				ST		switchCount	{LNXT:26|29|-1}
+(*) INT
+3000019A  F8DF 70D8		ldr r7, [pc, #+216] ; 0x200002AC
+3000019E  8038     		strh r0, [r7]
+
+#92		
+#93		$label5:
+#94			(* END_IF *)
+#95		
+#96		
+#97			(* IF Input_7 *)
+#98			LD		Input_7	{LNXT:29|-1|-1}
+(*) UNDEF
+300001A0  F8DF 70FC		ldr r7, [pc, #+252] ; 0x2401E4FC
+300001A4  7838     		ldrb r0, [r7]
+
+#99			JMPCN	$label6	{LNXT:29|30|33}
+(-) BOOL
+300001A6  2800     		cmp r0, #0
+300001A8  D008     		beq #16 ; 0x300001BC
+
+
+#100		
+#101			(* THEN *)
+#102		
+#103				(* switchCount := switchCount + 1; *)
+#104				LD		switchCount	{LNXT:30|33|-1}
+(*) UNDEF
+300001AC  F8DF 70C4		ldr r7, [pc, #+196] ; 0x200002AC
+300001B0  F9B7 0000		ldrsh r0, [r7]
+
+#105				ADD		1	{LNXT:30|33|-1}
+(-) INT
+300001B4  1C40     		add r0, r0, #1
+
+#106				ST		switchCount	{LNXT:30|33|-1}
+(*) INT
+300001B6  F8DF 70BC		ldr r7, [pc, #+188] ; 0x200002AC
+300001BA  8038     		strh r0, [r7]
+
+#107		
+#108		$label6:
+#109			(* END_IF *)
+#110		
+#111		
+#112			(* IF Input_8 *)
+#113			LD		Input_8	{LNXT:33|-1|-1}
+(*) UNDEF
+300001BC  F8DF 70E4		ldr r7, [pc, #+228] ; 0x2401E4FE
+300001C0  7838     		ldrb r0, [r7]
+
+#114			JMPCN	$label7	{LNXT:33|34|38}
+(-) BOOL
+300001C2  2800     		cmp r0, #0
+300001C4  D008     		beq #16 ; 0x300001D8
+
+
+#115		
+#116			(* THEN *)
+#117		
+#118				(* switchCount := switchCount + 1; *)
+#119				LD		switchCount	{LNXT:34|38|-1}
+(*) UNDEF
+300001C8  F8DF 70A8		ldr r7, [pc, #+168] ; 0x200002AC
+300001CC  F9B7 0000		ldrsh r0, [r7]
+
+#120				ADD		1	{LNXT:34|38|-1}
+(-) INT
+300001D0  1C40     		add r0, r0, #1
+
+#121				ST		switchCount	{LNXT:34|38|-1}
+(*) INT
+300001D2  F8DF 70A0		ldr r7, [pc, #+160] ; 0x200002AC
+300001D6  8038     		strh r0, [r7]
+
+#122		
+#123		$label7:
+#124			(* END_IF *)
+#125		
+#126		
+#127			(* IF switchCount < 0 *)
+#128			LD		switchCount	{LNXT:38|-1|-1}
+(*) UNDEF
+300001D8  F8DF 7098		ldr r7, [pc, #+152] ; 0x200002AC
+300001DC  F9B7 0000		ldrsh r0, [r7]
+
+#129			LT		0	{LNXT:38|-1|-1}
+(*) INT
+300001E0  2800     		cmp r0, #0
+300001E2  BFA8 2000		gemov r0, #0
+300001E6  BFB8 2001		ltmov r0, #1
+
+#130			JMPCN	$label8	{LNXT:38|40|46}
+(-) BOOL
+300001EA  2800     		cmp r0, #0
+300001EC  D004     		beq #8 ; 0x300001F8
+
+
+#131		
+#132			(* THEN *)
+#133		
+#134				(* switchCount := 0; *)
+#135				MOVE		0,switchCount	{LNXT:40|46|-1}
+(*) BOOL
+300001F0  2000     		mov r0, #0 ; 0
+300001F2  F8DF 7080		ldr r7, [pc, #+128] ; 0x200002AC
+300001F6  8038     		strh r0, [r7]
+
+#136		
+#137		$label8:
+#138			(* END_IF *)
+#139		
+#140			(* LED_4 := (switchCount AND 1) <> 0; *)
+#141			LD		switchCount	{LNXT:46|47|-1}
+(*) UNDEF
+300001F8  F8DF 7078		ldr r7, [pc, #+120] ; 0x200002AC
+300001FC  F9B7 0000		ldrsh r0, [r7]
+
+#142			AND		1	{LNXT:46|47|-1}
+(*) INT
+30000200  2701     		mov r7, #1 ; 1
+30000202  4038     		and r0, r0, r7
+
+#143			NE		0	{LNXT:46|47|-1}
+(*) INT
+30000204  2800     		cmp r0, #0
+30000206  BF08 2000		eqmov r0, #0
+3000020A  BF18 2001		nemov r0, #1
+
+#144			ST		LED_4	{LNXT:46|47|-1}
+(*) BOOL
+3000020E  F8DF 7074		ldr r7, [pc, #+116] ; 0x2401E4EB
+30000212  7038     		strb r0, [r7]
+
+#145		
+#146			(* LED_3 := (switchCount AND 2) <> 0; *)
+#147			LD		switchCount	{LNXT:47|48|-1}
+(*) UNDEF
+30000214  F8DF 705C		ldr r7, [pc, #+92] ; 0x200002AC
+30000218  F9B7 0000		ldrsh r0, [r7]
+
+#148			AND		2	{LNXT:47|48|-1}
+(*) INT
+3000021C  2702     		mov r7, #2 ; 2
+3000021E  4038     		and r0, r0, r7
+
+#149			NE		0	{LNXT:47|48|-1}
+(*) INT
+30000220  2800     		cmp r0, #0
+30000222  BF08 2000		eqmov r0, #0
+30000226  BF18 2001		nemov r0, #1
+
+#150			ST		LED_3	{LNXT:47|48|-1}
+(*) BOOL
+3000022A  F8DF 7054		ldr r7, [pc, #+84] ; 0x2401E4EA
+3000022E  7038     		strb r0, [r7]
+
+#151		
+#152			(* LED_2 := (switchCount AND 4) <> 0; *)
+#153			LD		switchCount	{LNXT:48|49|-1}
+(*) UNDEF
+30000230  F8DF 7040		ldr r7, [pc, #+64] ; 0x200002AC
+30000234  F9B7 0000		ldrsh r0, [r7]
+
+#154			AND		4	{LNXT:48|49|-1}
+(*) INT
+30000238  2704     		mov r7, #4 ; 4
+3000023A  4038     		and r0, r0, r7
+
+#155			NE		0	{LNXT:48|49|-1}
+(*) INT
+3000023C  2800     		cmp r0, #0
+3000023E  BF08 2000		eqmov r0, #0
+30000242  BF18 2001		nemov r0, #1
+
+#156			ST		LED_2	{LNXT:48|49|-1}
+(*) BOOL
+30000246  F8DF 7034		ldr r7, [pc, #+52] ; 0x2401E4E9
+3000024A  7038     		strb r0, [r7]
+
+#157		
+#158			(* LED_1 := (switchCount AND 8) <> 0; *)
+#159			LD		switchCount	{LNXT:49|2|-1}
+(*) UNDEF
+3000024C  F8DF 7024		ldr r7, [pc, #+36] ; 0x200002AC
+30000250  F9B7 0000		ldrsh r0, [r7]
+
+#160			AND		8	{LNXT:49|2|-1}
+(*) INT
+30000254  2708     		mov r7, #8 ; 8
+30000256  4038     		and r0, r0, r7
+
+#161			NE		0	{LNXT:49|2|-1}
+(*) INT
+30000258  2800     		cmp r0, #0
+3000025A  BF08 2000		eqmov r0, #0
+3000025E  BF18 2001		nemov r0, #1
+
+#162			ST		LED_1	{LNXT:49|2|-1}
+(*) BOOL
+30000262  F8DF 7014		ldr r7, [pc, #+20] ; 0x2401E4E8
+30000266  7038     		strb r0, [r7]
+
+30000268  E8BD 0FF0		ldmia sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
+3000026C  F8DD E000		ldr lr, [sp]
+30000270  B002     		add sp, sp, #8
+
+30000272  4770     		bx lr
+
+30000274  200002AC		; 0x200002AC
+30000278  FFFFFFFF		; 0x2401E4E8
+3000027C  FFFFFFFF		; 0x2401E4E9
+30000280  FFFFFFFF		; 0x2401E4EA
+30000284  FFFFFFFF		; 0x2401E4EB
+30000288  FFFFFFFF		; 0x2401E4F0
+3000028C  FFFFFFFF		; 0x2401E4F2
+30000290  FFFFFFFF		; 0x2401E4F4
+30000294  FFFFFFFF		; 0x2401E4F6
+30000298  FFFFFFFF		; 0x2401E4F8
+3000029C  FFFFFFFF		; 0x2401E4FA
+300002A0  FFFFFFFF		; 0x2401E4FC
+300002A4  FFFFFFFF		; 0x2401E4FE
+
+END_PROGRAM
+
+
+**************************************************
+	Target variable image generation
+**************************************************
+
+
+*** INPUT:
+300002A8  4770     		bx lr
+
+
+*** OUTPUT:
+300002AA  4770     		bx lr
+
+
+
+**************************************************
+	Task Fast init code
+**************************************************
+
+300002AC  B082     		sub sp, sp, #8
+300002AE  F8CD E000		str lr, [sp]
+300002B2  E92D 0FF0		stmdb sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
+
+300002B6  E8BD 0FF0		ldmia sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
+300002BA  F8DD E000		ldr lr, [sp]
+300002BE  B002     		add sp, sp, #8
+
+300002C0  4770     		bx lr
+
+**************************************************
+	List program: InitParDB
+**************************************************
+
+PROGRAM InitParDB
+
+        VAR
+warningsKiller : USINT;
+dummyCrc32 : UDINT;
+	END_VAR
+
+END_PROGRAM
+
+300002D0  B082     		sub sp, sp, #8
+300002D2  F8CD E000		str lr, [sp]
+300002D6  E92D 0FF0		stmdb sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
+
+#0		{SRC:InitParDB}
+#1		(*$WAITSWITCH$*)
+#2		
+#3			(* dummyCrc32 := 0; *)
+#4			MOVE		0,dummyCrc32	{LNXT:3|5|-1}
+(*) UDINT
+300002DA  2000     		mov r0, #0 ; 0
+300002DC  F8DF 7058		ldr r7, [pc, #+88] ; 0x200002A8
+300002E0  6038     		str r0, [r7]
+
+#5		
+#6			(* warningsKiller := sysDBase_SetExtTable( TO_DWORD( 0 ), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ); *)
+#7			LDP0		0	{LNXT:5|3|-1}
+(-) UDINT
+#8			TO_DWORD	{LNXT:5|3|-1}
+(-) USINT
+300002E2  2000     		mov r0, #0 ; 0
+
+#9			sysDBase_SetExtTable		0, 0, 0, 0, 0, 0, 0, 0, 0, 0	{LNXT:5|3|-1}
+(*) DWORD
+300002E4  B088     		sub sp, sp, #32
+300002E6  2700     		mov r7, #0 ; 0
+300002E8  4639     		mov r1, r7
+300002EA  2700     		mov r7, #0 ; 0
+300002EC  463A     		mov r2, r7
+300002EE  2700     		mov r7, #0 ; 0
+300002F0  463B     		mov r3, r7
+300002F2  2700     		mov r7, #0 ; 0
+300002F4  F8CD 7000		str r7, [sp]
+300002F8  2700     		mov r7, #0 ; 0
+300002FA  F8CD 7004		str r7, [sp, #+4]
+300002FE  2700     		mov r7, #0 ; 0
+30000300  F8CD 7008		str r7, [sp, #+8]
+30000304  2700     		mov r7, #0 ; 0
+30000306  F8CD 700C		str r7, [sp, #+12]
+3000030A  2700     		mov r7, #0 ; 0
+3000030C  F8CD 7010		str r7, [sp, #+16]
+30000310  2700     		mov r7, #0 ; 0
+30000312  F8CD 7014		str r7, [sp, #+20]
+30000316  2700     		mov r7, #0 ; 0
+30000318  F8CD 7018		str r7, [sp, #+24]
+3000031C  F8DF 4010		ldr r4, [pc, #+16] ; 0x80770A9
+30000320  F044 0401		orr r4, r4, #1
+30000324  47A0     		blx r4
+30000326  B008     		add sp, sp, #32
+
+#10			ST		warningsKiller	{LNXT:5|3|-1}
+(*) USINT
+30000328  F8DF 7008		ldr r7, [pc, #+8] ; 0x200002A5
+3000032C  7038     		strb r0, [r7]
+
+3000032E  E005     		b #10
+
+30000330  FFFFFFFF		; 0x080770A9
+30000334  200002A5		; 0x200002A5
+30000338  200002A8		; 0x200002A8
+
+END_PROGRAM
+**************************************************
+	List program: $$IOConfig
+**************************************************
+
+PROGRAM $$IOConfig
+
+        VAR
+warningsKiller : BOOL;
+	END_VAR
+
+END_PROGRAM
+
+#0		{SRC:$$IOConfig}
+#1		(*$WAITSWITCH$*)
+#2		
+#3			(* warningsKiller := sysCfgAnalogRes(16); *)
+#4			LDP0		16	{LNXT:4|7|-1}
+(-) UDINT
+#5			sysCfgAnalogRes	{LNXT:4|7|-1}
+(*) USINT
+3000033C  2010     		mov r0, #16 ; 16
+3000033E  F8DF 40BC		ldr r4, [pc, #+188] ; 0x807DDC1
+30000342  F044 0401		orr r4, r4, #1
+30000346  47A0     		blx r4
+
+#6			ST		warningsKiller	{LNXT:4|7|-1}
+(*) BOOL
+30000348  F8DF 70B8		ldr r7, [pc, #+184] ; 0x200002A4
+3000034C  7038     		strb r0, [r7]
+
+#7		
+#8			(* warningsKiller := sysCfgProgInput(0, 0); *)
+#9			LDP0		0	{LNXT:7|8|-1}
+(-) BOOL
+#10			sysCfgProgInput		0	{LNXT:7|8|-1}
+(*) USINT
+3000034E  2000     		mov r0, #0 ; 0
+30000350  2100     		mov r1, #0 ; 0
+30000352  F8DF 40AC		ldr r4, [pc, #+172] ; 0x807DDCD
+30000356  F044 0401		orr r4, r4, #1
+3000035A  47A0     		blx r4
+
+#11			ST		warningsKiller	{LNXT:7|8|-1}
+(*) BOOL
+3000035C  F8DF 70A4		ldr r7, [pc, #+164] ; 0x200002A4
+30000360  7038     		strb r0, [r7]
+
+#12		
+#13			(* warningsKiller := sysCfgProgInput(1, 0); *)
+#14			LDP0		1	{LNXT:8|9|-1}
+(-) BOOL
+#15			sysCfgProgInput		0	{LNXT:8|9|-1}
+(*) USINT
+30000362  2001     		mov r0, #1 ; 1
+30000364  2100     		mov r1, #0 ; 0
+30000366  F8DF 4098		ldr r4, [pc, #+152] ; 0x807DDCD
+3000036A  F044 0401		orr r4, r4, #1
+3000036E  47A0     		blx r4
+
+#16			ST		warningsKiller	{LNXT:8|9|-1}
+(*) BOOL
+30000370  F8DF 7090		ldr r7, [pc, #+144] ; 0x200002A4
+30000374  7038     		strb r0, [r7]
+
+#17		
+#18			(* warningsKiller := sysCfgProgInput(2, 0); *)
+#19			LDP0		2	{LNXT:9|10|-1}
+(-) BOOL
+#20			sysCfgProgInput		0	{LNXT:9|10|-1}
+(*) USINT
+30000376  2002     		mov r0, #2 ; 2
+30000378  2100     		mov r1, #0 ; 0
+3000037A  F8DF 4084		ldr r4, [pc, #+132] ; 0x807DDCD
+3000037E  F044 0401		orr r4, r4, #1
+30000382  47A0     		blx r4
+
+#21			ST		warningsKiller	{LNXT:9|10|-1}
+(*) BOOL
+30000384  F8DF 707C		ldr r7, [pc, #+124] ; 0x200002A4
+30000388  7038     		strb r0, [r7]
+
+#22		
+#23			(* warningsKiller := sysCfgProgInput(3, 0); *)
+#24			LDP0		3	{LNXT:10|11|-1}
+(-) BOOL
+#25			sysCfgProgInput		0	{LNXT:10|11|-1}
+(*) USINT
+3000038A  2003     		mov r0, #3 ; 3
+3000038C  2100     		mov r1, #0 ; 0
+3000038E  F8DF 4070		ldr r4, [pc, #+112] ; 0x807DDCD
+30000392  F044 0401		orr r4, r4, #1
+30000396  47A0     		blx r4
+
+#26			ST		warningsKiller	{LNXT:10|11|-1}
+(*) BOOL
+30000398  F8DF 7068		ldr r7, [pc, #+104] ; 0x200002A4
+3000039C  7038     		strb r0, [r7]
+
+#27		
+#28			(* warningsKiller := sysCfgProgInput(4, 0); *)
+#29			LDP0		4	{LNXT:11|12|-1}
+(-) BOOL
+#30			sysCfgProgInput		0	{LNXT:11|12|-1}
+(*) USINT
+3000039E  2004     		mov r0, #4 ; 4
+300003A0  2100     		mov r1, #0 ; 0
+300003A2  F8DF 405C		ldr r4, [pc, #+92] ; 0x807DDCD
+300003A6  F044 0401		orr r4, r4, #1
+300003AA  47A0     		blx r4
+
+#31			ST		warningsKiller	{LNXT:11|12|-1}
+(*) BOOL
+300003AC  F8DF 7054		ldr r7, [pc, #+84] ; 0x200002A4
+300003B0  7038     		strb r0, [r7]
+
+#32		
+#33			(* warningsKiller := sysCfgProgInput(5, 0); *)
+#34			LDP0		5	{LNXT:12|13|-1}
+(-) BOOL
+#35			sysCfgProgInput		0	{LNXT:12|13|-1}
+(*) USINT
+300003B2  2005     		mov r0, #5 ; 5
+300003B4  2100     		mov r1, #0 ; 0
+300003B6  F8DF 4048		ldr r4, [pc, #+72] ; 0x807DDCD
+300003BA  F044 0401		orr r4, r4, #1
+300003BE  47A0     		blx r4
+
+#36			ST		warningsKiller	{LNXT:12|13|-1}
+(*) BOOL
+300003C0  F8DF 7040		ldr r7, [pc, #+64] ; 0x200002A4
+300003C4  7038     		strb r0, [r7]
+
+#37		
+#38			(* warningsKiller := sysCfgProgInput(6, 0); *)
+#39			LDP0		6	{LNXT:13|14|-1}
+(-) BOOL
+#40			sysCfgProgInput		0	{LNXT:13|14|-1}
+(*) USINT
+300003C6  2006     		mov r0, #6 ; 6
+300003C8  2100     		mov r1, #0 ; 0
+300003CA  F8DF 4034		ldr r4, [pc, #+52] ; 0x807DDCD
+300003CE  F044 0401		orr r4, r4, #1
+300003D2  47A0     		blx r4
+
+#41			ST		warningsKiller	{LNXT:13|14|-1}
+(*) BOOL
+300003D4  F8DF 702C		ldr r7, [pc, #+44] ; 0x200002A4
+300003D8  7038     		strb r0, [r7]
+
+#42		
+#43			(* warningsKiller := sysCfgProgInput(7, 0); *)
+#44			LDP0		7	{LNXT:14|4|-1}
+(-) BOOL
+#45			sysCfgProgInput		0	{LNXT:14|4|-1}
+(*) USINT
+300003DA  2007     		mov r0, #7 ; 7
+300003DC  2100     		mov r1, #0 ; 0
+300003DE  F8DF 4020		ldr r4, [pc, #+32] ; 0x807DDCD
+300003E2  F044 0401		orr r4, r4, #1
+300003E6  47A0     		blx r4
+
+#46			ST		warningsKiller	{LNXT:14|4|-1}
+(*) BOOL
+300003E8  F8DF 7018		ldr r7, [pc, #+24] ; 0x200002A4
+300003EC  7038     		strb r0, [r7]
+
+300003EE  E8BD 0FF0		ldmia sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
+300003F2  F8DD E000		ldr lr, [sp]
+300003F6  B002     		add sp, sp, #8
+
+300003F8  4770     		bx lr
+
+300003FC  FFFFFFFF		; 0x0807DDC1
+30000400  FFFFFFFF		; 0x0807DDCD
+30000404  200002A4		; 0x200002A4
+
+END_PROGRAM
+
+
+**************************************************
+	Target variable image generation
+**************************************************
+
+
+*** INPUT:
+30000408  4770     		bx lr
+
+
+*** OUTPUT:
+3000040A  4770     		bx lr
+
+
+
+**************************************************
+	Task Init init code
+**************************************************
+
+3000040C  B082     		sub sp, sp, #8
+3000040E  F8CD E000		str lr, [sp]
+30000412  E92D 0FF0		stmdb sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
+
+30000416  E8BD 0FF0		ldmia sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
+3000041A  F8DD E000		ldr lr, [sp]
+3000041E  B002     		add sp, sp, #8
+
+30000420  4770     		bx lr
+
+
+
+**************************************************
+	Global init code
+**************************************************
+
+30000430  B082     		sub sp, sp, #8
+30000432  F8CD E000		str lr, [sp]
+30000436  E92D 0FF0		stmdb sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
+
+3000043A  E8BD 0FF0		ldmia sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
+3000043E  F8DD E000		ldr lr, [sp]
+30000442  B002     		add sp, sp, #8
+
+30000444  4770     		bx lr
+
+
+
+**************************************************
+	Global RETAIN init code
+**************************************************
+
+30000446  B082     		sub sp, sp, #8
+30000448  F8CD E000		str lr, [sp]
+3000044C  E92D 0FF0		stmdb sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
+
+30000450  E8BD 0FF0		ldmia sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
+30000454  F8DD E000		ldr lr, [sp]
+30000458  B002     		add sp, sp, #8
+
+3000045A  4770     		bx lr
+
+
+
+**************************************************
+	Task $$VirtualTables init code
+**************************************************
+
+3000045C  B082     		sub sp, sp, #8
+3000045E  F8CD E000		str lr, [sp]
+30000462  E92D 0FF0		stmdb sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
+
+30000466  E8BD 0FF0		ldmia sp!, { r4, r5, r6, r7, r8, r9, r10, r11 }
+3000046A  F8DD E000		ldr lr, [sp]
+3000046E  B002     		add sp, sp, #8
+
+30000470  4770     		bx lr
+
+
+
+********************************************
+MEMORY MAP
+********************************************
+
+Code area type:          		       main code
+Start code area:          		0000000030000000h
+End code area:            		00000000300005ECh
+Code size:                		000005ECh
+
+Start local data area:    		0000000020000298h
+End local data area:      		00000000200002AEh
+Local data size:          		00000016h
+
+Start retentive data area:		0000000038000800h
+End retentive data area:  		0000000038000800h
+Retentive data size:      		00000000h
+
+Start bit data area:      		0000000000000000h
+End bit data area:        		0000000000000000h
+Bit data size:            		00000000h
+
+
+
+********************************************
+CODE ID:                                E47563B6
+DEBUG MEMO ID:                          300002EE
+FULL MEMO ID:                           0000FA02
+********************************************
