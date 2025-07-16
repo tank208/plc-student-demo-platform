@@ -38,3 +38,10 @@ This developer log documents my daily engineering progress building a secure and
 
 - [Day 1 - Home PLC power on and calibration](./week08_day01_home_stack_power_on.md)
 - [Day 2 - Celsius and Simul8 module](./week08_day02_celsius_simul8_modules.md)
+
+## Week 9 & 10 - Medical Emergency
+- [Day 1 - Personal time away](./week10_day01_personal_time_away.md)
+
+## Week 11 - Back to work
+- [Day 1 - Module 02 upload and DIN Celcius wiring](./week11_day01_module02.md)
+
