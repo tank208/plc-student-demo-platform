@@ -27,6 +27,7 @@ It also documents the development process as a student-led research spine at the
 - `02_instructor/` – Wiring guides, hardware setup, teaching notes
 - `03_code/` – IEC ladder logic and C++ sketches for Opta deployment
 - `04_assets/` – Diagrams, wiring images, SCADA screenshots
+- `05_hardware/` – DIN rail test stand STL, 3MF, BOM, and print files
 - `devlog/` – Daily development log, architecture decisions, and lab findings
 - `docs/` – Research proposal, Gantt chart, project plan, and datasheets
 
@@ -50,6 +51,27 @@ All engineering decisions, logic experimentation, and debugging are tracked in t
 
 ---
 
+## New Additions (July 16, 2025)
+
+### DIN Rail Test Stand
+- Added a fully documented, 3D-printable DIN rail holder for classroom-safe wiring
+- Files: STL and 3MF (Bambu Studio), includes print settings, BOM, and layout instructions
+- Location: [`/05_hardware/`](./05_hardware/)
+
+### Curriculum Development
+- Completed and uploaded two curriculum modules for Boot Camp use:
+  - Module 01: First Steps with Arduino Opta
+  - Module 02: Digital Input Counting via Simul8 (binary output to LED)
+- Instructor and student versions maintained separately
+- Located in: [`/01_curriculum/`](./01_curriculum/)
+
+### Research and Planning
+- Recovered project momentum after medical leave
+- Maintained fiscal stewardship of research grant ($800 of $4000 allocated to equipment + tooling)
+- Reconfirmed integration path with Celsius DIN and future HMI (Ignition) work
+
+---
+
 ## Contributors
 
 - William Hall – Student Research Lead (University of Idaho – CDA Lab)
@@ -68,6 +90,7 @@ Licensed under the [MIT License](LICENSE).
 
 If you adapt or deploy this project, please retain attribution and cite the original work when possible.
 
+---
 
 ## Notes
 
