@@ -82,7 +82,7 @@ All engineering decisions, logic experimentation, and debugging are tracked in t
 
 ## Attribution
 
-This project was developed by **William Hall** as part of undergraduate research at the **University of Idaho – Coeur d’Alene**, under the mentorship of **Dr. John Shovic** and **Mary Everett**.
+This project was developed by **William Hall** as part of undergraduate research at the **University of Idaho – Coeur d’Alene**, under the mentorship of **Dr. John Shovic** and **Dr. Mary Everett**.
 
 Its purpose is to provide a modular, secure, and reproducible framework for teaching PLC control systems using the Arduino Opta.
 
