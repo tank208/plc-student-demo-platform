@@ -65,6 +65,16 @@ All engineering decisions, logic experimentation, and debugging are tracked in t
 - Instructor and student versions maintained separately
 - Located in: [`/01_curriculum/`](./01_curriculum/)
 
+## Reference Materials
+
+This project builds upon concepts and exercises introduced in Arduino's official PLC training course:
+
+- [Arduino PLC Course – Getting Started](https://courses.arduino.cc/explore-plc/lessons/getting-started)
+- [Arduino PLC Course – DIN Simul8 Projects](https://courses.arduino.cc/explore-plc/lessons/getting-started-din-simul8/)
+
+> This curriculum enhances and restructures key modules from the course to make them more accessible for high school and college students, with added troubleshooting guidance, classroom pacing, and instructional scaffolding.
+
+
 ### Research and Planning
 - Recovered project momentum after medical leave
 - Maintained fiscal stewardship of research grant ($800 of $4000 allocated to equipment + tooling)
