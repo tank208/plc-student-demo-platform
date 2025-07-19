@@ -113,7 +113,15 @@ You’ll write a simple Ladder Logic program that turns ON the Opta’s onboard 
 -  Program created and uploaded
     
 -  LED responds to USER button press
-    
+
+---
+## Review Before Continuing
+
+If you're struggling with this module:
+- Make sure the Arduino PLC IDE is installed and working correctly.
+- Revisit [Getting Started with Arduino Opta](https://courses.arduino.cc/explore-plc/lessons/getting-started) if your board isn’t flashing correctly.
+- Double-check USB-C power and make sure the runtime is in **RUN** mode.
+  
 
 ---
 

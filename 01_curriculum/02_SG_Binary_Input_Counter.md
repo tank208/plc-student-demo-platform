@@ -100,6 +100,16 @@ LED_1 := (switchCount AND 8) <> 0;
 
 ---
 
+## Review Before Continuing
+
+If the LEDs aren’t responding:
+- Make sure you completed [First Steps with Arduino Opta](https://courses.arduino.cc/explore-plc/lessons/getting-started) first.
+- Inputs must be live — the DIN Simul8 should be connected and powered.
+- Ladder logic won’t activate unless the runtime is active. Set the IDE to **RUN**.
+
+---
+
+
 ## Key Terms
 
 - **DIN Simul8:** Pre-wired digital input simulator with 8 switches
