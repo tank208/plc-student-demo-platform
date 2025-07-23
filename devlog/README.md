@@ -44,6 +44,8 @@ This developer log documents my daily engineering progress building a secure and
 
 ## Week 11 - Back to work
 - [Day 1 - Module 02 upload and DIN Celcius wiring](./week11_day01_module02.md)
-- [Day 2 - Module 02 Celsius wiring](./week11_day02_celsius_wiring.md)
-- [Day 3 - Module 02 Celsius programming](./week11_day03_celsius_programming.md)
+- [Day 2 - Module 03 Celsius wiring](./week11_day02_celsius_wiring.md)
+- [Day 3 - Module 03 Celsius programming](./week11_day03_celsius_programming.md)
 
+## Week 12 - Module 03
+- [Day 1 - Module 03 Celsius power on](./week12_day01_celsius_power_on.md)
