@@ -49,3 +49,4 @@ This developer log documents my daily engineering progress building a secure and
 
 ## Week 12 - Module 03
 - [Day 1 - Module 03 Celsius power on](./week12_day01_celsius_power_on.md)
+- [Day 2 - Module 03 completion and repo clean up](./week12_day02_repo_structure_cleanup.md)
