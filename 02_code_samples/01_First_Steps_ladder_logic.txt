@@ -1,0 +1,8 @@
+(* First Steps - Module 01
+   Reads BTN_0 input and counts pulses
+   Author: William Hall
+   Platform: Arduino Opta
+*)
+
+
+BTN_USER ──[ ]────( )── LED_BUILTIN

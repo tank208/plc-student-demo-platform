@@ -104,6 +104,12 @@ You’ll write a simple Ladder Logic program that turns ON the Opta’s onboard 
 
 ---
 
+## Reflection Questions
+
+- What role does `BTN_USER` play in your program?
+- Why is it important to understand input/output mapping in PLCs?
+- What might happen in an industrial system if inputs are not mapped correctly?
+
 ## Completion Checklist
 
 -  Opta connected via USB-C
@@ -113,15 +119,7 @@ You’ll write a simple Ladder Logic program that turns ON the Opta’s onboard 
 -  Program created and uploaded
     
 -  LED responds to USER button press
-
----
-## Review Before Continuing
-
-If you're struggling with this module:
-- Make sure the Arduino PLC IDE is installed and working correctly.
-- Revisit [Getting Started with Arduino Opta](https://courses.arduino.cc/explore-plc/lessons/getting-started) if your board isn’t flashing correctly.
-- Double-check USB-C power and make sure the runtime is in **RUN** mode.
-  
+    
 
 ---
 
@@ -133,7 +131,3 @@ If you're struggling with this module:
     
 - **USB-C**: Used for logic power and programming (not relay power)
     
-
----
-
-This module introduces the core programming workflow for the Opta in a safe environment using internal logic components only. Later modules will expand into external wiring, sensors, and full PLC behavior.
