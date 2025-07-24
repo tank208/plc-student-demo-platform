@@ -3,6 +3,11 @@
 *.bin
 *.hex
 *.map
+/build/
+/bin/
+/tmp/
+*.plcprj
+*.cfg
 
 # OS metadata
 .DS_Store
