@@ -3,6 +3,7 @@
 This repo is structured for modular use in classrooms, labs, or demos.
 
 - `/01_modules/` → Curriculum content (student + instructor)
+  
   ↳ Links to logic files in `/02_code_samples/`  
   ↳ References wiring images from `/03_assets/`
 
