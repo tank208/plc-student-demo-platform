@@ -1,6 +1,6 @@
 # DEVLOG – Week 12, Day 2
 
-**Date:** 2025-07-24  
+**Date:** 2025-07-23
 **Location:** Home PLC Lab  
 **Time Logged:** 10 hours  
 **System:** GitHub (Web + Desktop), Local Windows Development  
