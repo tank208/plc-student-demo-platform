@@ -51,3 +51,4 @@ This developer log documents my daily engineering progress building a secure and
 - [Day 1 - Module 03 Celsius power on](./week12_day01_celsius_power_on.md)
 - [Day 2 - Module 03 completion and repo clean up](./week12_day02_repo_structure_cleanup.md)
 - [Day 3 - Repository Clean Up](./week12_day03_repo_polishing.md)
+- [Day 4 - Wiring log, media, visual standards](./week12_day04_wiring_log.md)
