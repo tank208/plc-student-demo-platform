@@ -1,4 +1,4 @@
-# DEVLOG – Week 11, Day 4
+# DEVLOG – Week 12, Day 1
 
 **Date:** 2025-07-22  
 **Location:** Home PLC Lab  
