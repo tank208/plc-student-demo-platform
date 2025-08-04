@@ -52,8 +52,8 @@ By the end of this module, students will be able to:
 3. Insert a Coil and map it to `LED_BUILTIN` or `PA5`  
 4. Link the contact and coil in a single rung
 
-![LED Mapping](../03_assets/01_first_steps/01_led_mapping.png)  
-![Programmable Input Mapping](../03_assets/01_first_steps/01_programmable_input_mapping.png)
+![LED Mapping](../../03_assets/01_first_steps/01_led_mapping.png)  
+![Programmable Input Mapping](../../03_assets/01_first_steps/01_programmable_input_mapping.png)
 
 ---
 
@@ -62,7 +62,7 @@ By the end of this module, students will be able to:
 - `BTN_USER` → Internal digital input mapped to `PC13`  
 - `LED_BUILTIN` or `PA5` → Onboard user LED
 
-![Variable Mapping Table](../03_assets/01_first_steps/01_button_mapping.png)
+![Variable Mapping Table](../../03_assets/01_first_steps/01_button_mapping.png)
 
 ---
 
@@ -72,7 +72,7 @@ By the end of this module, students will be able to:
 - Activate the runtime and switch to **RUN** mode  
 - Press the USER button — the onboard LED should illuminate
 
-![Input/Output Behavior](../03_assets/01_first_steps/01_input-output.jpg)
+![Input/Output Behavior](../../03_assets/01_first_steps/01_input-output.jpg)
 
 ---
 

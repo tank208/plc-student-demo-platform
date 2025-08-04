@@ -58,7 +58,7 @@ You’ll write a Ladder Logic program that turns on the Opta’s onboard LED whe
 5. Insert a Coil and map it to `LED_BUILTIN` or `PA5`  
 6. Connect the contact and coil in a single rung
 
-![Ladder Logic Diagram](../03_assets/01_first_steps/01_ladder_logic.png)
+![Ladder Logic Diagram](../../03_assets/01_first_steps/01_ladder_logic.png)
 
 ---
 
@@ -67,7 +67,7 @@ You’ll write a Ladder Logic program that turns on the Opta’s onboard LED whe
 - `BTN_USER` = Internal button input, mapped to pin `PC13`  
 - `LED_BUILTIN` or `PA5` = Onboard LED, mapped to pin `PA5`
 
-![Variable Mapping Table](../03_assets/01_first_steps/01_button_mapping.png)
+![Variable Mapping Table](../../03_assets/01_first_steps/01_button_mapping.png)
 
 ---
 
@@ -82,7 +82,7 @@ You’ll write a Ladder Logic program that turns on the Opta’s onboard LED whe
 - Press the USER button  
 - The onboard LED should turn on while the button is held  
 
-![Input/Output Behavior](../03_assets/01_first_steps/01_input-output.jpg)
+![Input/Output Behavior](../../03_assets/01_first_steps/01_input-output.jpg)
 
 ---
 
