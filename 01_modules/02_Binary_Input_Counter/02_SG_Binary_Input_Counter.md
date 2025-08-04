@@ -31,6 +31,8 @@ By the end of this module, students will be able to:
 
 > **Note:** Do not alter any wiring. The system is pre-wired for safety and consistency.
 
+![Wiring Diagram](../../03_assets/02_Binary_Input_Counter/02_wiring.png)
+
 ---
 
 ## Program Logic – Structured Text (ST)
@@ -58,6 +60,15 @@ LED_3 := (switchCount AND 2) <> 0;
 LED_2 := (switchCount AND 4) <> 0;
 LED_1 := (switchCount AND 8) <> 0;
 ```
+
+## LED Output Map
+
+![LED Output Mapping](../../03_assets/02_Binary_Input_Counter/02_led_output_mapping.png)
+
+
+## Variable Mapping Diagram
+
+![Programmable Inputs](../../03_assets/02_Binary_Input_Counter/02_programmable_inputs_mapping.png)
 
 ---
 
@@ -106,3 +117,7 @@ LED_1 := (switchCount AND 8) <> 0;
 - **Digital Input (DI):** 24V signal interpreted as logic TRUE (1)
 - **Bitwise AND:** Operator that compares individual bits in integers
 - **Structured Text (ST):** IEC 61131-3 language used in industrial PLCs
+
+---
+
+Images and structure adapted from the official Arduino Explore PLC course under CC BY-SA 4.0 license. Attribution is required for reuse.

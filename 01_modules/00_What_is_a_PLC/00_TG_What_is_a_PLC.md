@@ -13,7 +13,7 @@ Introduce students to the purpose and importance of PLCs using relatable example
 
 - [Student Guide: What is a PLC?](../01_curriculum/00_SG_What_is_a_PLC.md)
 - [Arduino PLC Course – “What is a PLC?”](https://courses.arduino.cc/explore-plc/lessons/history-present-plc/)
-- [Opta Hardware Overview](../03_assets/00_what_is_a_plc/00_opta-characteristics.jpg)
+- [Opta Hardware Overview](../../03_assets/00_what_is_a_plc/00_opta-characteristics.jpg)
 
 Make sure students have access to these materials during the lesson. The Arduino image can be displayed during the warm-up or demo.
 

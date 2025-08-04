@@ -33,6 +33,7 @@ This module uses **pre-wired hardware only**. Students do not connect any physic
 > Ensure **shared GND** between all devices.  
 > Test continuity between each X# → I# pair before powering the system.
 
+![DIN Simul8 Wiring Diagram](../../03_assets/02_Binary_Input_Counter/02_wiring.png)
 ---
 
 ## Pre-Test Program
@@ -56,6 +57,16 @@ LED_1 := (switchCount AND 8) <> 0;
 ```
 
 ---
+
+## LED Output Map
+
+![LED Output Mapping](../../03_assets/02_Binary_Input_Counter/02_led_output_mapping.png)
+
+---
+
+## Variable Mapping Diagram
+
+![Programmable Inputs](../../03_assets/02_Binary_Input_Counter/02_programmable_inputs_mapping.png)
 
 ## Learning Outcomes to Assess
 
@@ -99,3 +110,5 @@ Students should:
 - [ ] Student environment ready (no exposed wiring)
 
 ---
+
+Images and structure adapted from the official Arduino Explore PLC course under CC BY-SA 4.0 license. Attribution is required for reuse.

@@ -33,6 +33,11 @@ By the end of this module, students will be able to:
 > **Note:** Ensure TMP236 is properly powered. Do not alter wiring unless instructed.
 
 ---
+## Wiring Diagram
+
+[Wiring Diagram: TMP236 Sensor to Opta](../../03_assets/03_Celsius_Sensor_Control/Module03_Wiring_DINSimul8.png)
+
+---
 
 ## Program Logic – Structured Text (ST)
 
@@ -86,6 +91,18 @@ END_IF;
 
 ---
 
+## Mapping
+
+![Global Variables](../../03_assets/03_Celsius_Sensor_Control/03_global_variables.png)
+
+![Input I/O Map](../../03_assets/03_Celsius_Sensor_Control/03_input_io_mapping.png)
+
+![Opta LED Outputs](../../03_assets/03_Celsius_Sensor_Control/03_opta_led_outputs.png)
+
+![Relay I/O Mapping](../../03_assets/03_Celsius_Sensor_Control/03_relay_io_mapping.png)
+
+---
+
 ## Upload and Test
 
 1. Open Arduino PLC IDE
@@ -105,6 +122,12 @@ END_IF;
 | 80               | >78      | OFF          | OFF     | OFF       |
 | 88               | >86      | OFF          | ON      | OFF       |
 | 96               | >95      | OFF          | ON      | ON        |
+
+---
+
+## Watch Testing
+
+![Oscilliscope](../../03_assets/03_Celsius_Sensor_Control/Module03_Celsius_Oscilloscope.png)
 
 ---
 
@@ -134,3 +157,13 @@ END_IF;
 - **Hysteresis:** Control logic to prevent rapid toggling of outputs
 - **Structured Text (ST):** IEC 61131-3 programming language for PLCs
 - **Relay Output:** Electrically-controlled switch to activate devices
+
+---
+
+## Reference
+
+- [Arduino PLC Course – Analog Input Example](https://courses.arduino.cc/explore-plc/lessons/heating-resistors-with-2-switches/)
+  *(Used for baseline logic. Modified and extended for sensor control.)*
+
+Images and structure adapted from the official Arduino Explore PLC course under CC BY-SA 4.0 license. Attribution is required for reuse.
+

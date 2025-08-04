@@ -36,6 +36,8 @@ This module uses **pre-wired sensor and relay outputs**. Students do not need to
 > Ensure the **TMP236 sensor is powered (Vcc and GND)**.  
 > Each relay COM terminal must receive +V for output switching.
 
+[Wiring Diagram: TMP236 Sensor to Opta](../../03_assets/03_Celsius_Sensor_Control/Module03_Wiring_DINSimul8.png)
+
 ---
 
 ## Pre-Test Program
@@ -70,6 +72,31 @@ END_IF;
 > Use a potentiometer or known temperature source for testing.
 
 ---
+
+## Mapping
+
+**Global Variables Mapping**
+![Global Variables](../../03_assets/03_Celsius_Sensor_Control/03_global_variables.png)
+
+**Input Signal Mapping** 
+![Input I/O Map](../../03_assets/03_Celsius_Sensor_Control/03_input_io_mapping.png)
+
+**LED Output Assignment**
+![Opta LED Outputs](../../03_assets/03_Celsius_Sensor_Control/03_opta_led_outputs.png)
+
+**Relay Output Mapping**
+![Relay I/O Mapping](../../03_assets/03_Celsius_Sensor_Control/03_relay_io_mapping.png)
+
+---
+
+## IDE and Runtime Setup Tips
+
+- Verify target board is set to Arduino Opta WiFi
+- Flash bootloader before uploading code (Tools > Runtime > Flash Bootloader)
+- Switch PLC to RUN mode after upload
+- Use Watch and Oscilloscope tools to monitor `Avg_Temp`, `Heat_O1`, and `LED_RED_ALARM`
+
+---
 ## Module Purpose
 
 This module introduces students to analog input processing and control logic using PLCs. It simulates a real-world scenario of temperature monitoring and heater control using relay outputs, serving as a foundational lab for understanding core PLC functions.
@@ -89,6 +116,20 @@ This module introduces students to analog input processing and control logic usi
 
 ---
 
+## Runtime Behavior Reference
+
+| Condition       | Temp (°C) | Expected Output                 |
+| --------------- | --------- | ------------------------------- |
+| Cold start      | <72       | Heaters ON                      |
+| Mid-range       | 72–78     | Heaters maintain previous state |
+| Warm room       | >78       | Heaters OFF                     |
+| Overheat risk   | >86       | Fan ON                          |
+| Alarm condition | >95       | Fan ON + Alarm ON               |
+| Near threshold  | 78–79     | Heaters remain OFF due to smoothing delay |
+
+
+---
+
 ## Assessment Strategy
 
 | Method                          | Description                                                                 |
@@ -98,6 +139,12 @@ This module introduces students to analog input processing and control logic usi
 | Instructor Q&A                  | Student answers conceptual and technical questions post-lab                |
 | Output Verification             | Relays, fan, and alarm states tested for at least 3 temperature thresholds |
 | Reflection Questions            | Students complete 3 post-lab written reflections                           |
+
+---
+
+## Watch Testing
+
+![Oscilloscope](../../03_assets/03_Celsius_Sensor_Control/Module03_Celsius_Oscilloscope.png)
 
 ---
 
@@ -127,6 +174,17 @@ Students should:
 | Relays do not activate     | COM terminals missing +24V                    |
 | Output flickering          | Threshold too narrow – add hysteresis         |
 | Alarm or fan doesn't trigger | Avg_Temp not reaching threshold – simulate input |
+
+---
+
+## Instructor Delivery Flow
+
+1. Confirm wiring and 24V supply to all devices
+2. Upload pre-test logic and verify relay function
+3. Walk through control logic and `Avg_Temp` smoothing
+4. Monitor behavior using Watch and Oscilloscope
+5. Assess with runtime observation and checklist
+6. Conclude with discussion based on reflection questions
 
 ---
 
