@@ -8,6 +8,15 @@
 
 ---
 
+## Resources
+
+- [Arduino PLC Course – “What is a PLC?”](https://courses.arduino.cc/explore-plc/lessons/first-steps/)
+- ![Opta Hardware Overview](../03_assets/00_what_is_a_plc/00_opta-characteristics.jpg)
+
+This lesson uses material adapted from the Arduino Explore PLC course under CC BY-SA 4.0 license. Attribution required for reuse.
+
+---
+
 ## Learning Objectives
 
 By the end of this module, students will be able to:
