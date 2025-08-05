@@ -21,7 +21,7 @@ Note: `Avg_Temp` is a smoothed version of the temperature that filters out noise
 
 This mirrors industrial use cases such as environmental chambers, HVAC systems, and process control systems. Instructors should emphasize sensor input scaling, control thresholds, and safety logic for overheat conditions.
 
-📖 Reference material:  
+Reference material:  
 [Arduino Explore PLC – Analog Input Basics](https://courses.arduino.cc/explore-plc/lessons/heating-resistors-with-2-switches/)
 
 

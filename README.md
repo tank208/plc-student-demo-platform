@@ -31,7 +31,9 @@ It also documents the development process as a student-led research spine at the
 - `03_assets/` – Wiring diagrams, oscilloscope output, and ladder logic images  
 - `04_hardware/` – Arduino Opta, DIN Simul8, TMP236 datasheets and physical testbed  
 - `devlog/` – Daily development logs, debug notes, and system findings  
-- `docs/` – Final reflection, grant proposal, and project planning materials  
+- `docs/` – Final reflection, grant proposal, and project planning materials
+- `printable_guides/` – PDF exports of all modules, organized by topic
+
 
 ---
 
@@ -76,6 +78,15 @@ If you are an instructor, curriculum designer, or researcher interested in adapt
 - Teacher Guides (`TG`) now include:
   - Direct links to code, images, and Arduino course references
   - Clear module purpose, instructional outcomes, and delivery flow
+
+### Printable Guides
+
+This folder contains exported PDFs of all curriculum modules.
+
+- Each module has its own subfolder
+- Both Student Guide (SG) and Teacher Guide (TG) are included
+- These files are used for printing, distribution, or offline review
+
 
 ### Repository Navigation
 - README updated to reflect full curriculum and research scope

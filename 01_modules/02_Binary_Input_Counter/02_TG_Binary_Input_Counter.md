@@ -158,4 +158,11 @@ Suggested Reflection Questions
 
 ---
 
+## Resources
+
+- Student Guide: [02_SG_Binary_Input_Counter](02_SG_Binary_Input_Counter.md)
+- Arduino Course – Getting Started:  
+  https://courses.arduino.cc/explore-plc/lessons/getting-started-din-simul8/
+
+
 Images and structure adapted from the official Arduino Explore PLC course under CC BY-SA 4.0 license. Attribution is required for reuse.

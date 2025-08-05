@@ -15,7 +15,7 @@ This module introduces students to analog signal processing and real-world contr
 
 This mirrors industrial use cases such as environmental chambers, HVAC systems, and process control systems. Instructors should emphasize sensor input scaling, control thresholds, and safety logic for overheat conditions.
 
-📖 Reference material:  
+Reference material:  
 [Arduino Explore PLC – Analog Input Basics](https://courses.arduino.cc/explore-plc/lessons/heating-resistors-with-2-switches/)
 
 
@@ -38,6 +38,20 @@ This module uses **pre-wired sensor and relay outputs**. Students do not need to
 ---
 
 ## Wiring Instructions
+
+### Wiring Length Reference
+| Connection                        | Estimated Length | Notes                                          |
+| --------------------------------- | ---------------- | ---------------------------------------------- |
+| TMP236 VOUT → Opta AI0 (I1)       | \~15–20 cm       | Use shielded wire if environment is noisy      |
+| TMP236 VCC → +5V supply           | \~15 cm          | From sensor to power rail or auxiliary 5V line |
+| TMP236 GND → GND rail             | \~15 cm          | Shared GND with Opta and power source          |
+| Relay 1 (Heater 1) → Opta O1      | \~20 cm          | Keep path short; logic signal only             |
+| Relay 2 (Heater 2) → Opta O2      | \~20 cm          | As above                                       |
+| Optional Fan → Opta O3            | \~20 cm          | Use colored wire for clarity                   |
+| Optional Alarm LED → Opta O4      | \~20 cm          | Route away from power lines if possible        |
+| COM terminals (all relays) → +24V | \~15–25 cm each  | Ensure each COM terminal receives +V           |
+| Relay GND (shared) → GND          | \~15–25 cm       | Common return line for relay block             |
+
 
 ### Power
 - Connect 24V DC power to:
@@ -250,7 +264,7 @@ Students should:
 
 ## Reference
 
-- [Student Guide Module 03](../../01_modules/03_Celsius_Sensor_Control/03_SG_Celsius_Sensor_Control.md)
+- [Student Guide Module 03](03_SG_Celsius_Sensor_Control.md)
 - [Arduino PLC Course – Analog Input Example](https://courses.arduino.cc/explore-plc/lessons/heating-resistors-with-2-switches/)
   *(Used for baseline logic. Modified and extended for sensor control.)*
 

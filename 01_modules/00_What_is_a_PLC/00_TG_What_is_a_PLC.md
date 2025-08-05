@@ -26,7 +26,8 @@ Where this is taught:
 
 - Instructor may present visuals or diagrams from the GitHub 03_assets/00_intro_plc folder
 
-- Reference: Arduino Explore PLC course, “What Is a PLC?” ([source](https://courses.arduino.cc/explore-plc/lessons/history-present-plc/))
+- Reference: Arduino Explore PLC course - [Arduino PLC Course – “What is a PLC?”](https://courses.arduino.cc/explore-plc/lessons/history-present-plc/)
+
 
 ---
 

@@ -39,16 +39,31 @@ This developer log documents my daily engineering progress building a secure and
 - [Day 1 - Home PLC power on and calibration](./week08_day01_home_stack_power_on.md)
 - [Day 2 - Celsius and Simul8 module](./week08_day02_celsius_simul8_modules.md)
 
+---
+
 ## Week 9 & 10 - Medical Emergency
 - [Day 1 - Personal time away](./week10_day01_personal_time_away.md)
+
+---
 
 ## Week 11 - Back to work
 - [Day 1 - Module 02 upload and DIN Celcius wiring](./week11_day01_module02.md)
 - [Day 2 - Module 03 Celsius wiring](./week11_day02_celsius_wiring.md)
 - [Day 3 - Module 03 Celsius programming](./week11_day03_celsius_programming.md)
 
+---
+
 ## Week 12 - Module 03
 - [Day 1 - Module 03 Celsius power on](./week12_day01_celsius_power_on.md)
 - [Day 2 - Module 03 completion and repo clean up](./week12_day02_repo_structure_cleanup.md)
 - [Day 3 - Repository Clean Up](./week12_day03_repo_polishing.md)
 - [Day 4 - Wiring log, media, visual standards](./week12_day04_wiring_log.md)
+
+---
+
+## Week 13 - Finals Week
+
+---
+
+## Week 14 - Project finalization
+- [Day 1 - Repo finalization](./week14_day01_milestone_repo_finalization.md)

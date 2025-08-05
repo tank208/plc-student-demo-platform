@@ -29,6 +29,8 @@ Where this is taught:
 
 - Additional clarification provided via input/output mapping diagrams and ladder screenshots in the GitHub 03_assets folder
 
+Reference material: [Arduino Explore PLC – First Program](https://courses.arduino.cc/explore-plc/lessons/getting-started/)
+
 ---
 
 ## Learning Objectives
@@ -148,9 +150,7 @@ By the end of this module, students will be able to:
 
 ## Resources
 
-- Student Guide: `01_SG_First_Steps.md`  
-- Variable Mapping: `../03_assets/01_first_steps/01_button_mapping.png`  
-- Ladder Logic Example: `../03_assets/01_first_steps/01_ladder_logic.png`  
+- Student Guide: [01_SG_First_Steps](01_SG_First_Steps.md)
 - Arduino Course – Getting Started:  
   https://courses.arduino.cc/explore-plc/lessons/getting-started/
 

@@ -8,6 +8,33 @@
 
 ---
 
+## Module Purpose
+This module introduces students to the foundational concept of a Programmable Logic Controller (PLC) as a reliable, deterministic computing system used in industrial environments to automate and control physical processes.
+
+The purpose of this module is to:
+
+- Define what a PLC is and what it is not (compared to microcontrollers, desktop computers, etc.)
+
+- Explain the core components of a PLC system, including the processor, I/O modules, power supply, and communication interfaces
+
+- Ground students in the real-world relevance of PLCs by exploring where they are used (factories, elevators, HVAC, irrigation, etc.)
+
+- Clarify the role of deterministic control and fail-safe logic in industrial systems
+
+- Introduce IEC 61131-3 and the concept of standardized programming languages (Ladder Logic, ST, FBD, etc.)
+
+This is a non-coding module focused on establishing conceptual clarity, preparing students to approach hands-on labs with context and purpose.
+
+Where this is taught:
+
+- Definitions and examples are covered in the Student Guide
+
+- Instructor may present visuals or diagrams from the GitHub 03_assets/00_intro_plc folder
+
+- Reference: Arduino Explore PLC course - [Arduino PLC Course – “What is a PLC?”](https://courses.arduino.cc/explore-plc/lessons/history-present-plc/)
+
+---
+
 ## Resources
 
 - [Arduino PLC Course – “What is a PLC?”](https://courses.arduino.cc/explore-plc/lessons/history-present-plc/)
