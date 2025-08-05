@@ -7,6 +7,35 @@
 
 ---
 
+## Module Purpose
+
+This module introduces students to analog signal processing and real-world control logic using the TMP236 temperature sensor and relay outputs. The objective is to teach students how to:
+
+- Read analog inputs from a sensor
+- Convert voltage to Celsius and Fahrenheit
+- Use smoothing (`Avg_Temp`) to stabilize sensor data
+- Control relays with hysteresis logic
+- Drive outputs (fan, heater, alarm) based on environmental conditions
+
+Note: `Avg_Temp` is a smoothed version of the temperature that filters out noise and prevents rapid toggling. This helps the relays behave more like industrial systems, avoiding flicker.
+
+This mirrors industrial use cases such as environmental chambers, HVAC systems, and process control systems. Instructors should emphasize sensor input scaling, control thresholds, and safety logic for overheat conditions.
+
+📖 Reference material:  
+[Arduino Explore PLC – Analog Input Basics](https://courses.arduino.cc/explore-plc/lessons/heating-resistors-with-2-switches/)
+
+
+---
+
+## What You'll Learn
+
+- How to read analog signals with a PLC
+- How temperature sensors work in real systems
+- How to smooth temperature values to make better decisions
+- How relays and indicators are controlled based on those decisions
+ 
+ ---
+
 ## Learning Objectives
 
 By the end of this module, students will be able to:
@@ -89,6 +118,10 @@ ELSE
 END_IF;
 ```
 
+**Structured Text Code**  
+[03_Celsius_Sensor_Control.st](../../02_code_samples/03_Celsius_Sensor_Control.st)
+
+
 ---
 
 ## Mapping
@@ -125,9 +158,13 @@ END_IF;
 
 ---
 
-## Watch Testing
+## Real-Time Data Monitoring (Watch & Oscilloscope)
 
-![Oscilliscope](../../03_assets/03_Celsius_Sensor_Control/Module03_Celsius_Oscilloscope.png)
+![Oscilloscope](../../03_assets/03_Celsius_Sensor_Control/Module03_Celsius_Oscilloscope.png)
+
+- `Avg_Temp` gradually tracks temperature input
+- `Heat_O1` and `Heat_O2` toggle ON/OFF at 72–78°C
+- `LED_ORANGE_FAN` and `LED_RED_ALARM` light up at correct thresholds
 
 ---
 
@@ -147,6 +184,14 @@ END_IF;
 - [ ] Relays respond correctly to Avg_Temp values
 - [ ] LEDs indicate fan and alarm conditions accurately
 - [ ] Student can explain logic and temperature smoothing
+
+---
+
+## Quick Self-Test
+
+- What temperature turns on the heater relays?
+- What is the purpose of hysteresis in this lab?
+- How is `Degrees_F` calculated from `Degrees_Output`?
 
 ---
 

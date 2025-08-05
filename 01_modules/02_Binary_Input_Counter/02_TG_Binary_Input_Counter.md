@@ -2,6 +2,16 @@
 
 ---
 
+## Module Purpose
+
+This module introduces students to the concept of digital input reading and binary counting using Structured Text (ST). Students learn how to monitor the state of physical switches via the DIN Simul8 module and represent those states as a single binary number. This forms the basis for more complex control systems where multiple inputs determine system behavior. Instructors should focus on explaining how digital inputs are mapped, how binary numbers represent switch states, and how to use bitwise logic (AND) to manipulate outputs based on the input count. Instructors should emphasize how structured logic maps cleanly to visual input states and reinforce this with live input toggling and LED changes during the lab session.
+
+Reference material: [Arduino Explore PLC – DIN Simul8 Digital Inputs](https://courses.arduino.cc/explore-plc/lessons/getting-started-din-simul8/)
+
+
+
+---
+
 ## Pre-Lab Setup
 
 This module uses **pre-wired hardware only**. Students do not connect any physical inputs or outputs.
@@ -17,6 +27,26 @@ This module uses **pre-wired hardware only**. Students do not connect any physic
 ---
 
 ## Wiring Instructions
+
+### Wiring Length Reference
+| From (DIN Simul8) | To (Opta Input) | Recommended Length | Notes                                            |
+| ----------------- | --------------- | ------------------ | ------------------------------------------------ |
+| X0                | I1              | 12 cm              | Route cleanly along edge of DIN rail             |
+| X1                | I2              | 13 cm              | Crosses one signal wire; avoid overlap           |
+| X2                | I3              | 14 cm              | Allow slight slack to accommodate bend radius    |
+| X3                | I4              | 15 cm              | Can be bundled with X2 → I3                      |
+| X4                | I5              | 16 cm              | Route under power leads if possible              |
+| X5                | I6              | 17 cm              | Avoid routing near 24V barrel connector          |
+| X6                | I7              | 18 cm              | Use shortest path across board to reduce clutter |
+| X7                | I8              | 19 cm              | End of array; route behind others if needed      |
+| GND               | Opta GND        | 10 cm              | Common GND; keep away from input bundle          |
+
+### Additional Notes
+- Use 20-22 AWG stranded wire.
+- Color coding:
+  - Red for +24V
+  - Black for GND
+  - White, Blue or Green for signal (X0 - X7)
 
 ### Power
 - Connect 24V DC power to both:
@@ -56,6 +86,9 @@ LED_2 := (switchCount AND 4) <> 0;
 LED_1 := (switchCount AND 8) <> 0;
 ```
 
+**Structured Text Code**
+![Binary Input Counter](../../02_code_samples/02_Binary_Input_Counter.st)
+
 ---
 
 ## LED Output Map
@@ -75,6 +108,20 @@ Students should:
 - Understand `switchCount` logic and the use of AND masks
 - Successfully upload and run their code on the Opta
 - Explain which LEDs should be active for a given input count
+
+---
+
+Suggested Reflection Questions
+
+- Why is a counter variable used instead of just checking each switch directly?
+
+- How does bitwise logic allow you to control multiple LEDs from one value?
+
+- What real-world systems use similar logic for input counting?
+
+- How could incorrect wiring or GND errors affect binary counting?
+
+
 
 ---
 

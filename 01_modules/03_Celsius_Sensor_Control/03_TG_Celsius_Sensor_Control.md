@@ -3,6 +3,25 @@
 
 ---
 
+## Module Purpose
+
+This module introduces students to analog signal processing and real-world control logic using the TMP236 temperature sensor and relay outputs. The objective is to teach students how to:
+
+- Read analog inputs from a sensor
+- Convert voltage to Celsius and Fahrenheit
+- Use smoothing (`Avg_Temp`) to stabilize sensor data
+- Control relays with hysteresis logic
+- Drive outputs (fan, heater, alarm) based on environmental conditions
+
+This mirrors industrial use cases such as environmental chambers, HVAC systems, and process control systems. Instructors should emphasize sensor input scaling, control thresholds, and safety logic for overheat conditions.
+
+📖 Reference material:  
+[Arduino Explore PLC – Analog Input Basics](https://courses.arduino.cc/explore-plc/lessons/heating-resistors-with-2-switches/)
+
+
+
+---
+
 ## Pre-Lab Setup
 
 This module uses **pre-wired sensor and relay outputs**. Students do not need to modify wiring.
@@ -36,11 +55,14 @@ This module uses **pre-wired sensor and relay outputs**. Students do not need to
 > Ensure the **TMP236 sensor is powered (Vcc and GND)**.  
 > Each relay COM terminal must receive +V for output switching.
 
-[Wiring Diagram: TMP236 Sensor to Opta](../../03_assets/03_Celsius_Sensor_Control/Module03_Wiring_DINSimul8.png)
+![Wiring Diagram: TMP236 Sensor to Opta](../../03_assets/03_Celsius_Sensor_Control/Module03_Wiring_DINSimul8.png)
 
 ---
 
 ## Pre-Test Program
+
+- To demonstrate smooth analog-to-digital control loop
+- To verify analog scaling matches real-world values (e.g., test with a hand warmer, cup of ice water, or potentiometer)
 
 Use this Structured Text logic to confirm sensor and relay output behavior:
 
@@ -70,6 +92,11 @@ END_IF;
 ```
 
 > Use a potentiometer or known temperature source for testing.
+> This verifies the sensor scaling and relay logic thresholds before full deployment. It introduces students to the analog-to-digital conversion process and allows instructors to explain signal smoothing (`Avg_Temp`) and output control with hysteresis.
+
+
+**Structured Text Code**
+[03_Celsius_Sensor_Control.st](../../02_code_samples/03_Celsius_Sensor_Control.st)
 
 ---
 
@@ -97,9 +124,18 @@ END_IF;
 - Use Watch and Oscilloscope tools to monitor `Avg_Temp`, `Heat_O1`, and `LED_RED_ALARM`
 
 ---
-## Module Purpose
 
-This module introduces students to analog input processing and control logic using PLCs. It simulates a real-world scenario of temperature monitoring and heater control using relay outputs, serving as a foundational lab for understanding core PLC functions.
+## Instructor Delivery Flow
+
+1. Confirm wiring and 24V supply to all devices
+2. Upload pre-test logic and verify relay function
+3. Walk through control logic and `Avg_Temp` smoothing
+4. Use **Watch Tool** to observe `Avg_Temp`, `Heat_O1`, `Heat_O2`
+5. Use **Oscilloscope Tool** to monitor analog transitions in real time
+6. Discuss runtime behavior across temperature thresholds
+7. Assess with runtime observation and checklist
+8. Conclude with discussion based on reflection questions
+
 
 ---
 
@@ -144,7 +180,11 @@ This module introduces students to analog input processing and control logic usi
 
 ## Watch Testing
 
+The Watch tool allows real-time inspection of variables such as Avg_Temp, Heat_O1, and Heat_O2, making it easier to demonstrate how temperature affects control logic.
+
 ![Oscilloscope](../../03_assets/03_Celsius_Sensor_Control/Module03_Celsius_Oscilloscope.png)
+
+Instructors should reinforce the connection between analog voltage conversion and digital control decisions — a key skill for industrial automation.
 
 ---
 
@@ -206,3 +246,12 @@ Students should:
 - [ ] IDE configured and project set up
 - [ ] Opta in RUN mode and PLC is communicating
 - [ ] Optional fan/alarm logic tested or simulated
+
+
+## Reference
+
+- [Student Guide Module 03](../../01_modules/03_Celsius_Sensor_Control/03_SG_Celsius_Sensor_Control.md)
+- [Arduino PLC Course – Analog Input Example](https://courses.arduino.cc/explore-plc/lessons/heating-resistors-with-2-switches/)
+  *(Used for baseline logic. Modified and extended for sensor control.)*
+
+Images and structure adapted from the official Arduino Explore PLC course under CC BY-SA 4.0 license. Attribution is required for reuse.

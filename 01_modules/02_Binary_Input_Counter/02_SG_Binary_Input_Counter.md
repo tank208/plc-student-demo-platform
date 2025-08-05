@@ -6,6 +6,16 @@
 
 ---
 
+## Module Purpose
+
+This module introduces students to the concept of digital input reading and binary counting using Structured Text (ST). Students learn how to monitor the state of physical switches via the DIN Simul8 module and represent those states as a single binary number. This forms the basis for more complex control systems where multiple inputs determine system behavior. Instructors should focus on explaining how digital inputs are mapped, how binary numbers represent switch states, and how to use bitwise logic (AND) to manipulate outputs based on the input count.
+
+Reference material: [Arduino Explore PLC – DIN Simul8 Digital Inputs](https://courses.arduino.cc/explore-plc/lessons/getting-started-din-simul8/)
+
+
+
+---
+
 ## Learning Objectives
 
 By the end of this module, students will be able to:
@@ -31,6 +41,7 @@ By the end of this module, students will be able to:
 
 > **Note:** Do not alter any wiring. The system is pre-wired for safety and consistency.
 
+**Wiring Diagram**
 ![Wiring Diagram](../../03_assets/02_Binary_Input_Counter/02_wiring.png)
 
 ---
@@ -60,6 +71,11 @@ LED_3 := (switchCount AND 2) <> 0;
 LED_2 := (switchCount AND 4) <> 0;
 LED_1 := (switchCount AND 8) <> 0;
 ```
+
+
+**Structured Text Code**
+![Binary Input Counter](../../02_code_samples/02_Binary_Input_Counter.st)
+
 
 ## LED Output Map
 
@@ -109,7 +125,6 @@ LED_1 := (switchCount AND 8) <> 0;
 - [ ] Student can explain how the bitwise logic works
 - [ ] Student can match physical switches to expected LED output
 
----
 
 ## Key Terms
 

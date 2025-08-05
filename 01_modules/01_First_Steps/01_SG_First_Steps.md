@@ -60,6 +60,8 @@ You’ll write a Ladder Logic program that turns on the Opta’s onboard LED whe
 
 ![Ladder Logic Diagram](../../03_assets/01_first_steps/01_ladder_logic.png)
 
+![Ladder Logic TXT](../../02_code_samples/01_First_Steps_ladder_logic.txt)
+
 ---
 
 ### Variable Mapping
@@ -120,7 +122,7 @@ You’ll write a Ladder Logic program that turns on the Opta’s onboard LED whe
 
 ---
 
-## Additional Resources
+## Resources
 
 - Instructor Guide: `01_TG_First_Steps.md`  
 - Arduino PLC Course – Getting Started:  
