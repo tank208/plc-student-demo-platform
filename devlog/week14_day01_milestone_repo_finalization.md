@@ -135,7 +135,7 @@
 
 This day marked the close of the first research phase. The curriculum is no longer theoretical — it is structured, teachable, and reproducible.
 
-Today's work wasn’t just polish — it was the act of stepping out of the builder’s mindset and into the educator’s. The system now speaks for itself: clear logic, pre-wired modules, visual standards, and learning flows. Everything is ready for classroom or lab use.
+Today's work wasn’t just polish, it was the act of stepping out of the builder’s mindset and into the educator’s. The system now speaks for itself: clear logic, pre-wired modules, visual standards, and learning flows. Everything is ready for classroom or lab use.
 
 This is the starting point, not the finish line. The real work begins when this system meets students.
 
