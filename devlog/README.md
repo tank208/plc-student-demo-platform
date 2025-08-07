@@ -67,3 +67,4 @@ This developer log documents my daily engineering progress building a secure and
 
 ## Week 14 - Project finalization
 - [Day 1 - Repo finalization](./week14_day01_milestone_repo_finalization.md)
+- [Day 2 - Final preparation](./week14_day02_final_preparation)
