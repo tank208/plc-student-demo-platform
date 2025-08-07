@@ -1,2 +1,4 @@
 *.st linguist-language=Pascal
 *.ld linguist-language=Text
+*.html linguist-language=HTML
+*.css linguist-language=CSS
