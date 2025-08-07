@@ -4,8 +4,7 @@
 
 This repository supports the development and deployment of a secure, modular, and repeatable student training platform using the Arduino Opta micro-PLC. It is designed for high school and undergraduate use in cybersecurity, systems engineering, and industrial automation education.
 
-> **Status:** Faculty-approved curriculum with Fall 2025 pilot deployment scheduled at University of Idaho.  
-> **Recognition:** Student researcher designated as Computer Science Department PLC Subject Matter Expert.  
+> **Status:** Faculty-approved curriculum with Fall 2025 pilot deployment scheduled at University of Idaho.   
 > **Validation:** Summer 2025 Undergraduate Research Grant recipient with institutional repository adoption approved.
 
 ---
