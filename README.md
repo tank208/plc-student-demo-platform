@@ -17,8 +17,6 @@ This research addresses critical workforce development challenges by making indu
 - **Faculty Validation** - Successful presentation to UI Computer Science Department (August 2025)
 - **Institutional Adoption** - Repository approved for UI CDA CS Department integration
 - **Pilot Deployment** - Fall 2025 bootcamp implementation scheduled
-- **Industry Interest** - Idaho National Laboratory workforce development inquiries
-- **Academic Recognition** - Designated department Subject Matter Expert in PLC systems
 
 ---
 
@@ -77,10 +75,8 @@ All curriculum modules use pre-wired hardware systems, eliminating traditional b
 ## Academic Validation
 
 ### University of Idaho Recognition
-- **Summer 2025 Research Grant** recipient through competitive application process
+- **Summer 2025 Undergraduate Research Grant** recipient through competitive application process
 - **Faculty Advisor Oversight** by Dr. Mary Everett and Dr. John Shovic
-- **Department SME Designation** for PLC systems and industrial automation
-- **Institutional Repository** approval for permanent CS Department integration
 
 ### Educational Standards
 - **Systematic research methodology** with comprehensive documentation
