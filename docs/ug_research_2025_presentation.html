@@ -1,0 +1,481 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino Opta PLC Curriculum - Summer Research</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            overflow: hidden;
+        }
+        
+        .presentation-container {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .slide {
+            display: none;
+            max-width: 1000px;
+            width: 90%;
+            text-align: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .slide.active {
+            display: block;
+            animation: slideIn 0.5s ease-in-out;
+        }
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .slide h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .slide h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #ffd700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .slide h3 {
+            font-size: 1.5em;
+            margin: 25px 0 15px 0;
+            color: #87ceeb;
+        }
+        
+        .slide p, .slide li {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 15px 0;
+            text-align: left;
+        }
+        
+        .slide ul {
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .slide li {
+            margin: 10px 0;
+            padding-left: 10px;
+        }
+        
+        .highlight {
+            background: rgba(255, 215, 0, 0.3);
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        
+        .success-metric {
+            background: rgba(0, 255, 0, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            border-left: 5px solid #00ff00;
+        }
+        
+        .navigation {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+        
+        .nav-btn {
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            border-radius: 25px;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+        
+        .slide-counter {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        
+        .problem-solution {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 20px 0;
+            text-align: left;
+        }
+        
+        .problem, .solution {
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        .problem {
+            background: rgba(255, 0, 0, 0.2);
+            border-left: 5px solid #ff4444;
+        }
+        
+        .solution {
+            background: rgba(0, 255, 0, 0.2);
+            border-left: 5px solid #44ff44;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .stat-box {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .big-number {
+            font-size: 3em;
+            font-weight: bold;
+            color: #ffd700;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="slide-counter">
+            <span id="current-slide">1</span> / <span id="total-slides">11</span>
+        </div>
+        
+        <!-- Slide 1: Title -->
+        <div class="slide active">
+            <h1>Arduino Opta PLC Student Training Platform</h1>
+            <h2>Summer 2025 Undergraduate Research</h2>
+            <p style="text-align: center; font-size: 1.4em; margin-top: 40px;">
+                <strong>William Hall</strong><br>
+                University of Idaho - Coeur d'Alene<br>
+                Faculty Advisors: Dr. John Shovic & Dr. Mary Everett
+            </p>
+            <p style="text-align: center; margin-top: 40px; font-style: italic;">
+                "Making Industrial Automation Accessible to Non-CS Students"
+            </p>
+        </div>
+        
+        <!-- Slide 2: The Problem & My Solution -->
+        <div class="slide">
+            <h2>The Problem I Solved</h2>
+            <div class="problem-solution">
+                <div class="problem">
+                    <h3>❌ The Challenge</h3>
+                    <ul>
+                        <li>PLC education requires expensive, complex equipment</li>
+                        <li>Non-CS students intimidated by industrial automation</li>
+                        <li>No accessible curriculum for Arduino Opta PLC</li>
+                        <li>Cybersecurity students need ICS knowledge</li>
+                    </ul>
+                </div>
+                <div class="solution">
+                    <h3>✅ My Solution</h3>
+                    <ul>
+                        <li><span class="highlight">Complete 4-module curriculum</span></li>
+                        <li><span class="highlight">No soldering required</span> - pre-wired hardware</li>
+                        <li><span class="highlight">Self-contained guides</span> for students & instructors</li>
+                        <li><span class="highlight">Bootcamp-ready</span> deployment system</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide 3: What I Delivered -->
+        <div class="slide">
+            <h2>What I Actually Built</h2>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="big-number">4</span>
+                    Complete Curriculum Modules
+                </div>
+                <div class="stat-box">
+                    <span class="big-number">100%</span>
+                    Documentation Coverage
+                </div>
+                <div class="stat-box">
+                    <span class="big-number">8</span>
+                    Guide Types (Student & Teacher)
+                </div>
+                <div class="stat-box">
+                    <span class="big-number">Ready</span>
+                    For Deployment
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 30px; font-size: 1.3em;">
+                <strong>Repository:</strong> github.com/tank208/plc-student-demo-platform
+            </p>
+        </div>
+        
+        <!-- Slide 4: Technical Implementation -->
+        <div class="slide">
+            <h2>Technical Platform</h2>
+            <div style="text-align: left; max-width: 800px; margin: 0 auto;">
+                <h3>Hardware Stack</h3>
+                <ul>
+                    <li><strong>Arduino Opta micro-PLC</strong> - Industrial-grade, USB-C powered</li>
+                    <li><strong>DIN Simul8 simulation block</strong> - No wiring complexity</li>
+                    <li><strong>TMP236 temperature sensor</strong> - Real analog input</li>
+                </ul>
+                
+                <h3>Software Integration</h3>
+                <ul>
+                    <li><strong>IEC 61131-3 compliant</strong> - Industry standard programming</li>
+                    <li><strong>Ladder Logic & Structured Text</strong> - Both paradigms covered</li>
+                    <li><strong>Modbus TCP/IP support</strong> - SCADA integration ready</li>
+                </ul>
+                
+                <h3>Key Innovation: <span class="highlight">3D-Printable test bed frame</span></h3>
+            </div>
+        </div>
+        
+        <!-- Slide 5: Curriculum Structure -->
+        <div class="slide">
+            <h2>Curriculum Progression</h2>
+            <div style="text-align: left; max-width: 900px; margin: 0 auto;">
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+                    <div class="success-metric">
+                        <strong>Module 00: Foundation</strong><br>
+                        PLC basics, Arduino Opta setup, hardware introduction
+                    </div>
+                    <div class="success-metric">
+                        <strong>Module 01: Digital I/O</strong><br>
+                        Basic input/output, relay logic fundamentals
+                    </div>
+                    <div class="success-metric">
+                        <strong>Module 02: Binary Counter</strong><br>
+                        Counter logic, state machines, timing concepts
+                    </div>
+                    <div class="success-metric">
+                        <strong>Module 03: Temperature Control</strong><br>
+                        Analog sensors, smoothing, hysteresis logic
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 30px; font-size: 1.2em;">
+                    <strong>Each module:</strong> Student Guide + Teacher Guide + Assessments + Code Samples
+                </p>
+            </div>
+        </div>
+        
+        <!-- Slide 6: Development Process -->
+        <div class="slide">
+            <h2>Research Methodology</h2>
+            <div style="text-align: left; max-width: 800px; margin: 0 auto;">
+                <h3>Systematic Development Approach</h3>
+                <ul>
+                    <li><strong>Daily development logs</strong> - Tracked progress and findings</li>
+                    <li><strong>Iterative testing</strong> - Hardware validation and code verification</li>
+                    <li><strong>Educational design</strong> - Student-centered curriculum development</li>
+                    <li><strong>Faculty review cycles</strong> - Multiple feedback iterations</li>
+                </ul>
+                
+                <h3>Quality Assurance</h3>
+                <ul>
+                    <li>✅ <strong>Cross-referenced documentation</strong> - All links verified</li>
+                    <li>✅ <strong>Consistent terminology</strong> - Professional writing standards</li>
+                    <li>✅ <strong>Self-contained guides</strong> - No external dependencies</li>
+                    <li>✅ <strong>Assessment strategies</strong> - Learning objective alignment</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Slide 7: Key Challenges & Solutions -->
+        <div class="slide">
+            <h2>Challenges I Overcame</h2>
+            <div style="text-align: left; max-width: 900px; margin: 0 auto;">
+                <h3>Challenge 1: Accessibility for Non-Technical Students</h3>
+                <p><strong>Solution:</strong> Created visual, intuitive guides with <span class="highlight">minimal prerequisites</span> and progressive complexity.</p>
+                
+                <h3>Challenge 2: Scalable Curriculum Design</h3>
+                <p><strong>Solution:</strong> <span class="highlight">Modular architecture</span> allows deployment from high school to university level.</p>
+                
+                <h3>Challenge 3: Hardware Complexity</h3>
+                <p><strong>Solution:</strong> Pre-wired systems requiring <span class="highlight">zero soldering or electrical work</span>.</p>
+                
+                <h3>Challenge 4: Instructor Support</h3>
+                <p><strong>Solution:</strong> Comprehensive Teacher Guides with <span class="highlight">delivery flow and timing</span>.</p>
+            </div>
+        </div>
+        
+        <!-- Slide 8: Validation & Testing -->
+        <div class="slide">
+            <h2>How I Know It Works</h2>
+            <div style="text-align: left; max-width: 800px; margin: 0 auto;">
+                <h3>Testing & Validation Evidence</h3>
+                <ul>
+                    <li><strong>Hardware verification</strong> - All circuits tested with digital multimeter</li>
+                    <li><strong>Code validation</strong> - Every example runs successfully</li>
+                    <li><strong>Documentation testing</strong> - Guides followed step-by-step</li>
+                    <li><strong>Faculty review</strong> - Multiple iterations and approvals</li>
+                </ul>
+                
+                <h3>Measurable Outcomes</h3>
+                <div class="success-metric">
+                    <strong>✅ Beta completion milestone achieved (v2025.08.04)</strong><br>
+                    Tagged for curriculum review with faculty approval
+                </div>
+                
+                <h3>Educational Impact Indicators</h3>
+                <ul>
+                    <li>Self-contained deployment capability demonstrated</li>
+                    <li>Bootcamp-style delivery validated</li>
+                    <li>Assessment strategies tested and refined</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Slide 9: Real-World Applications -->
+        <div class="slide">
+            <h2>Who Can Use This</h2>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 20px 0;">
+                <div class="stat-box">
+                    <h3>🏫 Educational</h3>
+                    <p>High schools, community colleges, universities teaching cybersecurity or systems engineering</p>
+                </div>
+                <div class="stat-box">
+                    <h3>💼 Workforce Dev</h3>
+                    <p>Bootcamps for career transitions, professional development in industrial settings</p>
+                </div>
+                <div class="stat-box">
+                    <h3>🔬 Research</h3>
+                    <p>Cyber-physical security research, ICS hardening demonstrations</p>
+                </div>
+            </div>
+            <div class="success-metric" style="text-align: center;">
+                <strong>Open Source Impact:</strong> MIT License allows adaptation and scaling across institutions
+            </div>
+        </div>
+        
+        <!-- Slide 10: Future Development -->
+        <div class="slide">
+            <h2>What's Next</h2>
+            <div style="text-align: left; max-width: 800px; margin: 0 auto;">
+                <h3>Immediate Extensions (Next Phase)</h3>
+                <ul>
+                    <li><strong>SCADA integration labs</strong> - Ignition Gateway tools</li>
+                    <li><strong>ICS security challenges</strong> - Modbus TCP/IP exploitation</li>
+                    <li><strong>Advanced cybersecurity modules</strong> - Industrial network security</li>
+                </ul>
+                
+                <h3>Long-term Vision</h3>
+                <ul>
+                    <li><strong>Industry partnerships</strong> - Real-world validation</li>
+                    <li><strong>Certification pathway</strong> - Stackable credentials</li>
+                    <li><strong>Multi-institutional deployment</strong> - Proven scalability</li>
+                </ul>
+                
+                <div class="success-metric">
+                    <strong>Foundation Complete:</strong> This summer established the core platform for advanced research
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide 11: Summary & Questions -->
+        <div class="slide">
+            <h2>Summer Research Success</h2>
+            <div style="text-align: left; max-width: 800px; margin: 0 auto;">
+                <h3>Key Accomplishments</h3>
+                <ul>
+                    <li>✅ <strong>Complete curriculum</strong> - 4 modules, fully documented</li>
+                    <li>✅ <strong>Production-ready materials</strong> - Deployable today</li>
+                    <li>✅ <strong>Educational innovation</strong> - Accessible industrial automation</li>
+                    <li>✅ <strong>Research foundation</strong> - Platform for advanced ICS security</li>
+                </ul>
+                
+                <h3>Measurable Impact</h3>
+                <div class="success-metric">
+                    Created a <strong>reproducible framework</strong> that bridges theoretical education and practical industrial skills for cybersecurity students
+                </div>
+                
+                <h3>Repository & Documentation</h3>
+                <p style="text-align: center; font-size: 1.2em;">
+                    <strong>github.com/tank208/plc-student-demo-platform</strong><br>
+                    <em>Complete curriculum ready for institutional deployment</em>
+                </p>
+            </div>
+            
+            <h2 style="margin-top: 40px; color: #ffd700;">Questions?</h2>
+        </div>
+    </div>
+    
+    <div class="navigation">
+        <button class="nav-btn" onclick="previousSlide()">← Previous</button>
+        <button class="nav-btn" onclick="nextSlide()">Next →</button>
+    </div>
+    
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        
+        document.getElementById('total-slides').textContent = totalSlides;
+        
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+            document.getElementById('current-slide').textContent = currentSlide + 1;
+        }
+        
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+        
+        function previousSlide() {
+            showSlide(currentSlide - 1);
+        }
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                previousSlide();
+            }
+        });
+    </script>
+</body>
+</html>
