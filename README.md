@@ -67,45 +67,6 @@ If you are an instructor, curriculum designer, or researcher interested in adapt
 
 ---
 
-## Recent Additions (August 4, 2025)
-
-### Curriculum Finalization
-- All four modules completed and reviewed for:
-  - Student Guides (`SG`)
-  - Teacher Guides (`TG`)
-  - Wiring length references, diagrams, and input/output mapping
-  - Reflection questions and assessment strategies
-- Teacher Guides (`TG`) now include:
-  - Direct links to code, images, and Arduino course references
-  - Clear module purpose, instructional outcomes, and delivery flow
-
-### Printable Guides
-
-This folder contains exported PDFs of all curriculum modules.
-
-- Each module has its own subfolder
-- Both Student Guide (SG) and Teacher Guide (TG) are included
-- These files are used for printing, distribution, or offline review
-
-
-### Repository Navigation
-- README updated to reflect full curriculum and research scope
-- Internal links between folders (`01_modules`, `02_code_samples`, `03_assets`) verified
-- Instructor-only assets documented but withheld for educational integrity
-
-### Structural Improvements
-- Wiring lengths mock-up added to Module 02 (`Binary Input Counter`)
-- `Module Purpose` clarified across all `TG` files
-- Consistency pass on terminology, formatting, and learning objective language
-- Additional clarity for smoothing (`Avg_Temp`) and hysteresis logic in Module 03
-
-### Instructor and Student Alignment
-- Instructor Notes now fully support guided delivery without relying on external documents
-- Student Curriculum guides made self-contained, suitable for bootcamp-style deployment
-- Reflection questions now support deeper critical thinking, real-world tie-in, and troubleshooting mindset
-
----
-
 ## Reference Materials
 
 This project was inspired by and extends core concepts from Arduino's official PLC tutorials:
