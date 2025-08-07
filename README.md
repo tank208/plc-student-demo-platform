@@ -1,113 +1,169 @@
-# PLC Student Demo Platform
+# Arduino Opta PLC Student Training Platform
 
-This repository supports the development and deployment of a secure, modular, and repeatable student training platform using the Arduino Opta micro-PLC.
+**Modular, student-friendly Arduino Opta PLC training system with ladder logic and SCADA readiness**
 
-It is designed for high school and undergraduate use in cybersecurity, systems engineering, and industrial automation education.
+This repository supports the development and deployment of a secure, modular, and repeatable student training platform using the Arduino Opta micro-PLC. It is designed for high school and undergraduate use in cybersecurity, systems engineering, and industrial automation education.
 
-> **Note:** This is an active curriculum pilot developed by a student researcher at the University of Idaho – Coeur d'Alene.  
-> The goal is to offer a secure, repeatable PLC platform that scales from beginner training to advanced ICS research.
+> **Status:** Faculty-approved curriculum with Fall 2025 pilot deployment scheduled at University of Idaho.  
+> **Recognition:** Student researcher designated as Computer Science Department PLC Subject Matter Expert.  
+> **Validation:** Summer 2025 Undergraduate Research Grant recipient with institutional repository adoption approved.
 
 ---
 
-## Purpose
+## Project Impact
+
+This research addresses critical workforce development challenges by making industrial automation accessible to cybersecurity students without electrical engineering prerequisites.
+
+### Recent Milestones
+- **Faculty Validation** - Successful presentation to UI Computer Science Department (August 2025)
+- **Institutional Adoption** - Repository approved for UI CDA CS Department integration
+- **Pilot Deployment** - Fall 2025 bootcamp implementation scheduled
+- **Industry Interest** - Idaho National Laboratory workforce development inquiries
+- **Academic Recognition** - Designated department Subject Matter Expert in PLC systems
+
+---
+
+## Educational Innovation
 
 This project introduces students to:
 
-- PLC hardware and relay logic (Arduino Opta)
-- IEC 61131-3 Ladder Logic and Structured Text programming
-- Modbus TCP/IP for industrial communication
-- SCADA visualization using Ignition
-- Cyber-physical system security concepts and basic ICS hardening principles
+- **PLC Hardware & Relay Logic** (Arduino Opta platform)
+- **IEC 61131-3 Programming** (Ladder Logic and Structured Text)
+- **Industrial Communication** (Modbus TCP/IP protocols)
+- **SCADA Integration** (Ignition visualization systems)
+- **Cybersecurity Applications** (Cyber-physical system security and ICS hardening)
 
-It also documents the development process as a student-led research spine at the University of Idaho – Coeur d'Alene.
-
----
-
-## Folder Overview
-
-- `00_overview/` – Research context, student objectives, and project background  
-- `01_modules/` – All-in-one student and instructor curriculum modules (00–03)
-- `02_code_samples/` – Structured Text and Ladder Logic pseudocode with screenshots  
-- `03_assets/` – Wiring diagrams, oscilloscope output, and ladder logic images  
-- `04_hardware/` – Arduino Opta, DIN Simul8, TMP236 datasheets and physical testbed  
-- `devlog/` – Daily development logs, debug notes, and system findings  
-- `docs/` – Final reflection, grant proposal, and project planning materials
-- `printable_guides/` – PDF exports of all modules, organized by topic
-
+### Key Innovation: Zero Electrical Prerequisites
+All curriculum modules use pre-wired hardware systems, eliminating traditional barriers while maintaining industry-standard programming practices and professional development environments.
 
 ---
 
-## Getting Started
+## Repository Structure
 
-To implement this instructional system in a lab or classroom:
-
-> All curriculum modules are designed for pre-wired hardware. No soldering or electrical configuration required.
-1. Begin with the [curriculum modules](./01_modules/)
-2. Power the Arduino Opta using USB-C and optionally connect the DIN Simul8 block
-3. Open ladder logic projects in the Arduino PLC IDE
-4. Upload ST or ladder logic files to the PLC
-5. Use the Oscilloscope or Watch tools to verify sensor and output behavior
-6. (Optional) Integrate with SCADA dashboard using Ignition and Modbus TCP/IP
-
----
-
-## For Educators
-
-If you are an instructor, curriculum designer, or researcher interested in adapting this platform for your classroom or lab:
-
-- See `00_overview/` for context and deployment advice
-- All `.md` files are written for clarity and instructional reuse
-- Instructor-only guides (not published in this repo) are available upon request
+| Folder | Purpose | Status |
+|--------|---------|--------|
+| [`00_overview/`](./00_overview/) | Research context, objectives, and deployment guidance | Complete |
+| [`01_modules/`](./01_modules/) | Complete curriculum modules (00–03) with instructor guides | Faculty Approved |
+| [`02_code_samples/`](./02_code_samples/) | Structured Text and Ladder Logic with documentation | Tested |
+| [`03_assets/`](./03_assets/) | Wiring diagrams, system outputs, and visual resources | Validated |
+| [`04_hardware/`](./04_hardware/) | Equipment specifications and 3D-printable test beds | Production Ready |
+| [`devlog/`](./devlog/) | Development logs and systematic research documentation | Comprehensive |
+| [`docs/`](./docs/) | Research proposals, presentations, and institutional reports | Professional |
+| [`printable_guides/`](./printable_guides/) | PDF exports for classroom and lab distribution | Ready |
 
 ---
 
-## Development Log
+## Quick Start
 
-+ System design decisions, logic testing, and student iteration are tracked in the [DEVLOG](./devlog/README.md).
+### For Educators
+1. **Review** [`00_overview/`](./00_overview/) for comprehensive implementation guidance
+2. **Examine** [`01_modules/`](./01_modules/) for complete curriculum with instructor support
+3. **Access** [`printable_guides/`](./printable_guides/) for immediate classroom distribution
+4. **Reference** [`docs/`](./docs/) for institutional adoption framework
+
+### For Students
+1. **Begin** with Module 00 (Foundation) in [`01_modules/`](./01_modules/)
+2. **Power** Arduino Opta via USB-C and connect DIN Simul8 hardware
+3. **Open** Arduino PLC IDE and load provided code samples
+4. **Follow** step-by-step guides with integrated assessments
+5. **Progress** through modules 01-03 for complete competency development
+
+### For Researchers
+1. **Study** [`devlog/`](./devlog/) for systematic development methodology
+2. **Review** [`docs/`](./docs/) for research foundation and validation process
+3. **Examine** [`00_overview/`](./00_overview/) for replication and adaptation guidance
 
 ---
 
-## Reference Materials
+## Academic Validation
 
-This project was inspired by and extends core concepts from Arduino's official PLC tutorials:
+### University of Idaho Recognition
+- **Summer 2025 Research Grant** recipient through competitive application process
+- **Faculty Advisor Oversight** by Dr. Mary Everett and Dr. John Shovic
+- **Department SME Designation** for PLC systems and industrial automation
+- **Institutional Repository** approval for permanent CS Department integration
 
+### Educational Standards
+- **Systematic research methodology** with comprehensive documentation
+- **Faculty review cycles** ensuring academic rigor and practical applicability
+- **Assessment strategies** aligned with learning objectives and competency measurement
+- **Reproducible framework** enabling multi-institutional deployment
+
+---
+
+## Industry Relevance
+
+### Workforce Development Focus
+Addresses documented cybersecurity workforce challenges where professionals require industrial control systems knowledge for critical infrastructure protection but face educational accessibility barriers.
+
+### Professional Standards
+- **IEC 61131-3 compliant** programming maintaining industry transferability
+- **Cross-platform compatibility** supporting Linux and Windows development environments
+- **Modern communication protocols** including Modbus TCP/IP and SCADA integration
+- **Real hardware experience** with industrial-grade Arduino Opta platform
+
+---
+
+## Reference & Attribution
+
+### Academic Foundation
+This project extends concepts from Arduino's official PLC curriculum under CC BY-SA 4.0 license:
 - [Arduino PLC Course – Getting Started](https://courses.arduino.cc/explore-plc/lessons/getting-started)
 - [DIN Simul8 Projects](https://courses.arduino.cc/explore-plc/lessons/getting-started-din-simul8/)
 
-These external tutorials were used under the terms of the CC BY-SA 4.0 license, with attribution and modification noted in the guides.
+All content has been systematically rewritten for structured curriculum development, educational accessibility, and reproducible deployment in academic environments.
 
-All content has been rewritten to support structured curriculum development, instructional clarity, and reproducible system behavior for student labs.
-
----
-
-## Contributors
-
-- William Hall – Student Research Lead (University of Idaho – CDA Lab)  
-- Dr. John Shovic – Faculty Advisor  
-- Dr. Mary Everett – Faculty Advisor
+### Research Team
+- **William Hall** – Principal Investigator, University of Idaho – Coeur d'Alene
+- **Dr. Mary Everett** – Faculty Advisor and Research Supervisor
+- **Dr. John Shovic** – Faculty Advisor and Laboratory Director
 
 ---
 
-## Attribution
+## Licensing & Usage
 
-This project was developed by **William Hall** as part of undergraduate research at the **University of Idaho – Coeur d’Alene**, under the mentorship of **Dr. John Shovic** and **Dr. Mary Everett**.
+**Licensed under [MIT License](./LICENSE)** for maximum educational accessibility.
 
-Its purpose is to provide a modular, secure, and reproducible framework for teaching PLC control systems using the Arduino Opta.
-
-Licensed under the [MIT License](./LICENSE).
-
-If you adapt or deploy this project, please retain attribution and cite the original work when possible.
-
----
-
-## Notes
-
-This repository is sanitized for educational and research use.  
-Instructor-only archives contain wiring methods and live lab materials to preserve system integrity.
+### Attribution Requirements
+When adapting or deploying this curriculum:
+- **Retain original attribution** to research team and institution
+- **Cite source repository** in educational materials and publications
+- **Reference funding source** (University of Idaho Summer 2025 Research Grant)
+- **Maintain open-source commitment** for collaborative educational development
 
 ---
 
-**Milestone Commit:** `v2025.08.04`  
-Tagged for curriculum beta completion and review with faculty.
+## Future Development
 
-Future phases may include SCADA integration labs and ICS security challenges using Modbus TCP/IP and Ignition Gateway tools.
+### Immediate Extensions (Fall 2025)
+- **Pilot deployment** through UI bootcamp with student outcome measurement
+- **Faculty training** workshop development for broader institutional adoption
+- **Assessment validation** through real classroom implementation
+
+### Advanced Modules (Research Phase 2)
+- **SCADA Integration Labs** using Ignition Gateway tools and advanced visualization
+- **ICS Security Challenges** demonstrating Modbus TCP/IP vulnerabilities and protection
+- **Multi-institutional deployment** with shared best practices and outcome data
+
+---
+
+## Contact & Collaboration
+
+### Implementation Support
+For curriculum adoption, faculty development, or institutional partnership opportunities:
+- **Technical Questions:** Repository issues and discussions
+- **Educational Consultation:** Contact through University of Idaho channels
+- **Research Collaboration:** Faculty advisor coordination preferred
+
+### Professional Network
+- **Repository:** [github.com/tank208/plc-student-demo-platform](https://github.com/tank208/plc-student-demo-platform)
+- **Institution:** University of Idaho – Coeur d'Alene, Computer Science Department
+- **Professional Contact:** Through institutional channels and faculty advisor coordination
+
+---
+
+**Current Status:** Institutionally validated curriculum ready for deployment  
+**Latest Milestone:** Faculty presentation and repository adoption approval (August 2025)  
+**Next Phase:** Fall 2025 pilot implementation with outcome measurement and research continuation
+
+*This repository represents systematic undergraduate research addressing real workforce development challenges through innovative educational design, validated by academic rigor and institutional adoption.*
