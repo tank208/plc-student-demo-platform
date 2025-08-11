@@ -1,11 +1,46 @@
-
 <!DOCTYPE html>
+<!--
+/**
+ * Arduino Opta PLC Student Training Platform - Interactive Presentation
+ * 
+ * @author William Hall
+ * @institution University of Idaho - Coeur d'Alene  
+ * @project Summer 2025 Undergraduate Research Grant
+ * @advisors Dr. Mary Everett, Dr. John Shovic
+ * @date August 2025
+ * @version 1.0
+ * 
+ * @description Interactive HTML presentation showcasing curriculum development
+ * for Arduino Opta PLC education targeting non-CS students in cybersecurity
+ * and systems engineering programs.
+ * 
+ * @repository https://github.com/tank208/plc-student-demo-platform
+ * @license MIT License - See repository for full terms
+ * 
+ * This work represents original research conducted under faculty supervision
+ * at the University of Idaho - Coeur d'Alene campus. All content, design,
+ * and implementation are original contributions by William Hall.
+ */
+-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arduino Opta PLC Curriculum - Summer Research</title>
+    <meta name="author" content="William Hall">
+    <meta name="description" content="Arduino Opta PLC Curriculum - Summer 2025 Research Presentation">
+    <meta name="copyright" content="© 2025 William Hall, University of Idaho">
+    <meta name="keywords" content="PLC, Arduino Opta, Cybersecurity Education, Undergraduate Research">
+    <title>Arduino Opta PLC Curriculum - Summer Research - William Hall</title>
     <style>
+        /*
+         * Presentation Styles for Arduino Opta PLC Curriculum
+         * Author: William Hall
+         * Institution: University of Idaho - Coeur d'Alene
+         * Date: August 2025
+         * 
+         * Custom CSS developed for undergraduate research presentation
+         * showcasing PLC curriculum development work.
+         */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
@@ -134,6 +169,15 @@
             font-size: 14px;
         }
         
+        .attribution-footer {
+            position: fixed;
+            bottom: 5px;
+            left: 20px;
+            font-size: 11px;
+            opacity: 0.6;
+            color: #fff;
+        }
+        
         .problem-solution {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -183,6 +227,10 @@
     <div class="presentation-container">
         <div class="slide-counter">
             <span id="current-slide">1</span> / <span id="total-slides">11</span>
+        </div>
+        
+        <div class="attribution-footer">
+            © 2025 William Hall - University of Idaho Research Project
         </div>
         
         <!-- Slide 1: Title -->
@@ -346,7 +394,7 @@
             <div style="text-align: left; max-width: 800px; margin: 0 auto;">
                 <h3>Testing & Validation Evidence</h3>
                 <ul>
-                    <li><strong>Hardware verification</strong> - All circuits tested with digital multimeter</li>
+                    <li><strong>Hardware verification</strong> - All circuits tested with oscilloscope</li>
                     <li><strong>Code validation</strong> - Every example runs successfully</li>
                     <li><strong>Documentation testing</strong> - Guides followed step-by-step</li>
                     <li><strong>Faculty review</strong> - Multiple iterations and approvals</li>
@@ -447,6 +495,23 @@
     </div>
     
     <script>
+        // Project ownership and attribution information
+        const projectInfo = {
+            author: "William Hall",
+            institution: "University of Idaho - Coeur d'Alene",
+            project: "Arduino Opta PLC Student Training Platform",
+            year: "2025",
+            advisors: ["Dr. Mary Everett", "Dr. John Shovic"],
+            repository: "https://github.com/tank208/plc-student-demo-platform",
+            license: "MIT License"
+        };
+
+        // Display authorship info in console
+        console.log("🎓 Presentation created by:", projectInfo.author);
+        console.log("🏛️ Institution:", projectInfo.institution);
+        console.log("📊 Project:", projectInfo.project);
+        console.log("📁 Repository:", projectInfo.repository);
+        
         let currentSlide = 0;
         const slides = document.querySelectorAll('.slide');
         const totalSlides = slides.length;
